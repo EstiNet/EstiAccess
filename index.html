@@ -35,6 +35,12 @@
 
 <body>
 
+    <script>
+    var menu = require('./menu.js');
+    var menuService = new menu();
+    console.log(menuService.getLi())
+    document.write(menuService.getLi())
+     </script>
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -45,31 +51,14 @@
                         EstiAccess
                     </a>
                 </li>
+
                 <li>
                     <a href="#">Test1</a>
                 </li>
-                <li>
-                    <a href="#">Test2</a>
-                </li>
-                <li>
-                    <a href="#">Test3</a>
-                </li>
-                <li>
-                    <a href="#">Test4</a>
-                </li>
-                <li>
-                    <a href="#">Test5</a>
-                </li>
-                <li>
-                    <a href="#">Test6</a>
-                </li>
-                <li>
-                    <a href="#">Test7</a>
-                </li>
+                 <div id="list"></div>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
@@ -81,19 +70,14 @@
 					<input type="text" name="consoleOut" value="Type here.">
 				</form>
             </div>
-				
             </div>
         </div>
         <!-- /#page-content-wrapper -->
 		<hr />
     </div>
     <!-- /#wrapper -->
-
-
-
     <!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <!-- Main script -->
 	<script src="renderer.js"></script>
 

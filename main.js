@@ -1,17 +1,28 @@
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
+
+var ipcMain = electron;  
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
 
+const storage = require('./storage');
+
+global.sessionArray = [{'name': 'test', 'ip': '69', 'port': '21'}];
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow () {
+  console.log("Creating window...")
+  global.storageService = new storage();
+  global.storageService.indexStorage();
+  console.log("Indexed storage.")
+
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
