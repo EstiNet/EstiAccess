@@ -34,13 +34,6 @@
 </head>
 
 <body>
-
-    <script>
-    var menu = require('./menu.js');
-    var menuService = new menu();
-    console.log(menuService.getLi())
-    document.write(menuService.getLi())
-     </script>
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -50,10 +43,6 @@
                     <a href="#">
                         EstiAccess
                     </a>
-                </li>
-
-                <li>
-                    <a href="#">Test1</a>
                 </li>
                  <div id="list"></div>
             </ul>
@@ -81,6 +70,11 @@
     <!-- Main script -->
 	<script src="renderer.js"></script>
 
+    <script>
+    var menu = require('./menu.js');
+    var menuService = new menu();
+    document.getElementById('list').innerHTML += menuService.getLi()
+     </script>
 </body>
 
 </html>
