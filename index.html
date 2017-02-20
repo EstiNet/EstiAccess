@@ -40,8 +40,8 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        EstiAccess
+                    <a onclick="showMainMenu()" href="#">
+                        EstiAccess!
                     </a>
                 </li>
                  <div id="list"></div>
@@ -50,14 +50,8 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="jumbotron">
-				<p>Console text goes here!</p>
-				</div>
-				<form>
-					<input type="submit" value="Submit">
-					<input type="text" name="consoleOut" value="Type here.">
-				</form>
+            <div class="container-fluid" id="container-f">
+                
             </div>
             </div>
         </div>
@@ -71,9 +65,64 @@
 	<script src="renderer.js"></script>
 
     <script>
-    var menu = require('./menu.js');
-    var menuService = new menu();
-    document.getElementById('list').innerHTML += menuService.getLi()
+        var menu = require('./menu.js');
+        var menuService = new menu();
+        document.getElementById('list').innerHTML += menuService.getLi()
+        
+        function sessionClick(element){
+            var remote = require('electron').remote; 
+            document.getElementById('container-f').innerHTML = "<textarea readonly>" +
+            remote.getGlobal('sessionLog')[remote.getGlobal('sessionFromName')[element]] +
+            "</textarea>" +
+            "<form>"+
+            "<input type = \"text\" name=\"consoleOut\" placeholder=\"Type here.\">"+
+            "<input type = \"submit\" onclick=\"submitText(this.form)\" value=\"Submit\">"+
+            "</form>";
+        }
+
+        function submitText(element){
+
+        }
+        function showMainMenu(){
+            document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" onsubmit=\"return onMainMenuSubmission()\">" +
+            "Name: <input type = \"text\" name=\"name\"><br>" +
+            "IP:   <input type = \"text\" name=\"ip\"><br>" +
+            "Port: <input type = \"text\" name=\"port\"><br>" +
+            "<input type = \"submit\" value=\"Submit\">"+
+            "</form>";
+        }
+        function onMainMenuSubmission(){
+            console.log("Processing MainMenuSubmission...");
+            var remote = require('electron').remote; 
+            var name = document.forms["createServer"]["name"].value;
+            var ip = document.forms["createServer"]["ip"].value;
+            var port = document.forms["createServer"]["port"].value;
+            if (name == "") {
+                console.log("Fill out name plz.");
+                alert("Name must be filled out.");
+                return false;
+            }
+            else if(remote.getGlobal('sessionFromName')[name] != null){
+                console.log("Name already exists.");
+                alert("Name already exists.");
+                return false;
+            }
+            else if(ip == ""){
+                console.log("Fill out IP plz.");
+                alert("IP must be filled out.");
+                return false;
+            }
+            else if(port == ""){
+                console.log("Fill out port plz.");
+                alert("Port must be filled out.");
+                return false;
+            }
+            else{
+                console.log("Setup complete!");
+                remote.getGlobal('storage').createSession(name, ip, port);
+                alert("Created session " + name + " at " + ip + ":" + port + ".");
+            }
+        }
      </script>
 </body>
 

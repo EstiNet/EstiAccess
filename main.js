@@ -11,17 +11,23 @@ const url = require('url')
 
 const storage = require('./storage');
 
-global.sessionArray = [{'name': 'test', 'ip': '69', 'port': '21'}];
+global.sessionArray = [];
 
+global.curOpenSession = -1;
+global.sessionOnline = [];
+global.sessionFromName = [];
+global.sessions = [];
+global.sessionLog = [];
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
-  console.log("Creating window...")
-  global.storageService = new storage();
+global.storageService = new storage();
   global.storageService.indexStorage();
   console.log("Indexed storage.")
+
+function createWindow () {
+  console.log("Creating window...")
 
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
@@ -67,5 +73,31 @@ app.on('activate', function () {
   }
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+global.sessionArray.forEach(function(element){
+        var socket = require('socket.io-client')('http://' + element.ip + ":" + global.port);
+socket.on('connect', function(){
+  socket.emit('hello', element.password, function(data){
+    if(data.equals("authed")){
+      console.log("Connected!")
+      global.sessionOnline[socket.id] = true;
+      socket.emit('curlogs', function(data){
+        global.sessionLog[socket.id] = data;
+      });
+    }
+    else{
+      console.log("Failed to connect!");
+    }
+  });
+});
+socket.on('log', function(data){
+  global.sessionLog[socket.id] += data;
+});
+socket.on('disconnect', function(){
+  global.sessionOnline[socket.id] = false;
+})
+global.sessions[socket.id] = socket;
+global.sessionOnline[socket.id] = false;
+global.sessionFromName[element.name] = socket.id;
+global.sessionLog[socket.id] = "";
+socket.connect();
+});

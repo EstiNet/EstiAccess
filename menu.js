@@ -6,7 +6,7 @@ var self = this;
     var retur = ""
     console.log(remote.getGlobal('sessionArray'));
     remote.getGlobal('sessionArray').forEach(function(element){
-        retur += '<li><a href="#">' + element.name + '</a></li>'
+        retur += '<li><a onclick="sessionClick(this.id)" id=' + element.name + '>' + element.name + '</a></li>'
     });
     return retur
 }
