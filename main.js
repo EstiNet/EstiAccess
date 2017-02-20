@@ -11,7 +11,7 @@ const url = require('url')
 
 const storage = require('./storage');
 
-global.sessionArray = [];
+global.sessionArray = [{'name': 'test', 'ip': 'localhost', 'port': '1', 'password': 'help'}];
 
 global.curOpenSession = -1;
 global.sessionOnline = [];

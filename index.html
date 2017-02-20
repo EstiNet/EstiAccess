@@ -84,10 +84,11 @@
 
         }
         function showMainMenu(){
-            document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" onsubmit=\"return onMainMenuSubmission()\">" +
+            document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
             "Name: <input type = \"text\" name=\"name\"><br>" +
             "IP:   <input type = \"text\" name=\"ip\"><br>" +
             "Port: <input type = \"text\" name=\"port\"><br>" +
+            "Password: <input type = \"text\" name=\"password\"><br>" +
             "<input type = \"submit\" value=\"Submit\">"+
             "</form>";
         }
@@ -97,6 +98,7 @@
             var name = document.forms["createServer"]["name"].value;
             var ip = document.forms["createServer"]["ip"].value;
             var port = document.forms["createServer"]["port"].value;
+            var password = document.forms["createServer"]["password"].value;
             if (name == "") {
                 console.log("Fill out name plz.");
                 alert("Name must be filled out.");
@@ -117,10 +119,15 @@
                 alert("Port must be filled out.");
                 return false;
             }
+            else if(password == ""){
+                console.log("Fill out password plz");
+                alert("Password must be filled out.");
+                return false;
+            }
             else{
                 console.log("Setup complete!");
-                remote.getGlobal('storage').createSession(name, ip, port);
-                alert("Created session " + name + " at " + ip + ":" + port + ".");
+                remote.getGlobal('storage').createSession(name, ip, port, password);
+                alert("Created session " + name + " at " + ip + ":" + port + ".") ;
             }
         }
      </script>
