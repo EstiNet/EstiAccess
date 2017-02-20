@@ -5,7 +5,6 @@ var storageService = function(){
     self.indexStorage = function (){
 
         console.log("Indexing storage...")
-        global.sessionArray.push({'name': 'test', 'ip': '69', 'port': '21'})
         var fs = require('fs');
         var dir = './sessions';
 
