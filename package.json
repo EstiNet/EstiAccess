@@ -1,22 +1,32 @@
 {
-  "name": "electron-quick-start",
+  "name": "EstiAccess",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A cool console management program to manage EstiConsole servers.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"electron .",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
+  "author": "EspiDev",
   "license": "CC0-1.0",
+  "dependencies": {
+    "angular2": "2.0.0-beta.7",
+    "systemjs": "0.19.22",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.5.15"
+  },
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.1",
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
+    "typescript": "^1.7.5",
+    "typings":"^0.6.8"
   }
 }

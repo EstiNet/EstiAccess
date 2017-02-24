@@ -22,7 +22,7 @@ var storageService = function(){
         global.sessionArray.push(ob)
         });
         });
-    })
+    });
     console.log(global.sessionArray)
 }
 
