@@ -3,6 +3,280 @@
   <component name="ChangeListManager">
     <list default="true" id="e1fd0b73-3d99-4edd-bae5-c0888316fc5f" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/angu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/common.umd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/index.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/common_directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/common_directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/common_directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/common_directives.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/core_directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/core_directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/core_directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/core_directives.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_class.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_class.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_class.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_for.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_for.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_for.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_for.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_if.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_if.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_if.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_if.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_plural.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_plural.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_plural.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_plural.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_style.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_style.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_style.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_style.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_switch.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_switch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_switch.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_switch.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_template_outlet.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_template_outlet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_template_outlet.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/ng_template_outlet.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/observable_list_diff.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/observable_list_diff.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/directives/observable_list_diff.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/async.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/async.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/async.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/base_wrapped_exception.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/base_wrapped_exception.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/base_wrapped_exception.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/collection.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/collection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/collection.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/collection.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/exception_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/exception_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/exception_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/exceptions.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/exceptions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/exceptions.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/intl.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/intl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/intl.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/lang.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/lang.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/lang.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/lang.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/promise.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/promise.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/facade/promise.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/abstract_control_directive.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/abstract_control_directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/abstract_control_directive.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/checkbox_value_accessor.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/checkbox_value_accessor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/checkbox_value_accessor.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/checkbox_value_accessor.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_container.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_container.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_container.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_value_accessor.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_value_accessor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_value_accessor.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/control_value_accessor.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/default_value_accessor.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/default_value_accessor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/default_value_accessor.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/default_value_accessor.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/form_interface.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/form_interface.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/form_interface.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_group.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_group.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_group.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_name.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_name.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_name.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_name.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_status.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_status.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_status.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_control_status.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_control.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_control.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_control.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_control.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_model.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_model.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_form_model.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_model.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_model.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/ng_model.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/normalize_validator.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/normalize_validator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/normalize_validator.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/number_value_accessor.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/number_value_accessor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/number_value_accessor.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/number_value_accessor.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/radio_control_value_accessor.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/radio_control_value_accessor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/radio_control_value_accessor.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/radio_control_value_accessor.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/select_control_value_accessor.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/select_control_value_accessor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/select_control_value_accessor.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/select_control_value_accessor.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/shared.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/shared.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/shared.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/validators.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/validators.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/validators.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/directives/validators.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/form_builder.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/form_builder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/form_builder.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/form_builder.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/model.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/model.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/model.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/validators.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/validators.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/validators.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/forms/validators.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/hash_location_strategy.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/hash_location_strategy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/hash_location_strategy.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/hash_location_strategy.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location_strategy.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location_strategy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location_strategy.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/location_strategy.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/path_location_strategy.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/path_location_strategy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/path_location_strategy.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/path_location_strategy.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/platform_location.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/platform_location.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/location/platform_location.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/async_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/async_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/async_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/async_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/common_pipes.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/common_pipes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/common_pipes.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/common_pipes.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/date_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/date_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/date_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/date_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_plural_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_plural_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_plural_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_plural_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_select_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_select_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_select_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/i18n_select_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/invalid_pipe_argument_exception.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/invalid_pipe_argument_exception.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/invalid_pipe_argument_exception.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/json_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/json_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/json_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/json_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/lowercase_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/lowercase_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/lowercase_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/lowercase_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/number_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/number_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/number_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/number_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/replace_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/replace_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/replace_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/replace_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/slice_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/slice_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/slice_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/slice_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/uppercase_pipe.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/uppercase_pipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/uppercase_pipe.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/src/pipes/uppercase_pipe.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/location_mock.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/location_mock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/location_mock.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/location_mock.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/mock_location_strategy.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/mock_location_strategy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/mock_location_strategy.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/esm/testing/mock_location_strategy.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/index.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/common_directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/common_directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/common_directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/common_directives.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/core_directives.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/core_directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/core_directives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/core_directives.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_class.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_class.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_class.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_for.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_for.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_for.js.map" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/environment_main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/environment_main.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/environment_main.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/rxjs/CoreOperators.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/rxjs/CoreOperators.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/rxjs/CoreOperators.js.map" afterPath="" />
@@ -159,9 +433,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/zone.js/lib/wtf.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/zone.js/lib/zones/long-stack-trace.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/environment_app.component.js" afterPath="$PROJECT_DIR$/app/environment_app.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/environment_app.component.js.map" afterPath="$PROJECT_DIR$/app/environment_app.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/environment_app.component.ts" afterPath="$PROJECT_DIR$/app/environment_app.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/reflect-metadata/Reflect.js" afterPath="$PROJECT_DIR$/node_modules/reflect-metadata/Reflect.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/reflect-metadata/Reflect.js.map" afterPath="$PROJECT_DIR$/node_modules/reflect-metadata/Reflect.js.map" />
@@ -922,7 +1193,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/zone.js/dist/zone.min.js" afterPath="$PROJECT_DIR$/node_modules/zone.js/dist/zone.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/zone.js/lib/zone.ts" afterPath="$PROJECT_DIR$/node_modules/zone.js/lib/zone.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/zone.js/package.json" afterPath="$PROJECT_DIR$/node_modules/zone.js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -957,8 +1227,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="63" />
+            <state relative-caret-position="1826">
+              <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -967,16 +1237,26 @@
       <file leaf-file-name="angu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/angu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="330">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding>
-                <marker date="1487991297023" expanded="true" signature="159:622" ph="..." />
-                <marker date="1487991297023" expanded="true" signature="190:423" ph="..." />
-                <marker date="1487991297023" expanded="true" signature="223:412" ph="..." />
-                <marker date="1487991297023" expanded="true" signature="262:351" ph="..." />
-                <marker date="1487991297023" expanded="true" signature="459:615" ph="..." />
-                <marker date="1487991297023" expanded="true" signature="514:604" ph="..." />
+                <marker date="1487993542684" expanded="true" signature="159:571" ph="..." />
+                <marker date="1487993542684" expanded="true" signature="190:447" ph="..." />
+                <marker date="1487993542684" expanded="true" signature="223:436" ph="..." />
+                <marker date="1487993542684" expanded="true" signature="262:351" ph="..." />
+                <marker date="1487993542684" expanded="true" signature="483:564" ph="..." />
+                <marker date="1487993542684" expanded="true" signature="538:553" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="npm-debug.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/npm-debug.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -984,8 +1264,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            <state relative-caret-position="44">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1004,21 +1284,9 @@
       <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="198">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment_main.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/environment_main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1026,8 +1294,8 @@
       <file leaf-file-name="serverset.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/serverset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-87">
-              <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            <state relative-caret-position="792">
+              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -1077,12 +1345,12 @@
         <option value="$PROJECT_DIR$/storage.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/vars.js" />
-        <option value="$PROJECT_DIR$/app/environment_main.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/menu.ts" />
         <option value="$PROJECT_DIR$/scripts/menu.js" />
         <option value="$PROJECT_DIR$/app/environment_app.component.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/environment_main.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/angu.js" />
       </list>
     </option>
@@ -1341,12 +1609,12 @@
       <workItem from="1487800057118" duration="1067000" />
       <workItem from="1487814749570" duration="657000" />
       <workItem from="1487815569638" duration="1272000" />
-      <workItem from="1487972094183" duration="16737000" />
+      <workItem from="1487972094183" duration="18951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19733000" />
+    <option name="totallyTimeSpent" value="21947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1359,10 +1627,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1385,8 +1653,6 @@
     <option name="processedProjectFiles" value="true" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/environment_app.component.js.map" />
-        <option value="$PROJECT_DIR$/app/environment_app.component.js" />
         <option value="$PROJECT_DIR$/app/environment_main.js" />
         <option value="$PROJECT_DIR$/app/environment_main.js.map" />
       </list>
@@ -1482,14 +1748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/npm-debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/menu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1578,22 +1836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/serverset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/loader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1629,32 +1871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/environment_main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/environment_app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -1663,17 +1879,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/environment_main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/npm-debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/serverset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/angu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
-            <marker date="1487991297023" expanded="true" signature="159:622" ph="..." />
-            <marker date="1487991297023" expanded="true" signature="190:423" ph="..." />
-            <marker date="1487991297023" expanded="true" signature="223:412" ph="..." />
-            <marker date="1487991297023" expanded="true" signature="262:351" ph="..." />
-            <marker date="1487991297023" expanded="true" signature="459:615" ph="..." />
-            <marker date="1487991297023" expanded="true" signature="514:604" ph="..." />
+            <marker date="1487993542684" expanded="true" signature="159:571" ph="..." />
+            <marker date="1487993542684" expanded="true" signature="190:447" ph="..." />
+            <marker date="1487993542684" expanded="true" signature="223:436" ph="..." />
+            <marker date="1487993542684" expanded="true" signature="262:351" ph="..." />
+            <marker date="1487993542684" expanded="true" signature="483:564" ph="..." />
+            <marker date="1487993542684" expanded="true" signature="538:553" ph="..." />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
@@ -15,27 +14,24 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.6/angular2-polyfills.js"></script>
-    <script src="https://code.angularjs.org/tools/system.js"></script>
-    <script src="https://code.angularjs.org/tools/typescript.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
+    <script src="node_modules/@angular/core/core.umd.js"></script>
+    <script src="node_modules/@angular/common/common.umd.js"></script>
+    <script src="node_modules/@angular/compiler/compiler.umd.js"></script>
+    <script src="node_modules/@angular/platform-browser/platform-browser.umd.js"></script>
+    <script src="node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app/angu.js"></script>
     <script src="renderer.js"></script>
     <script src="scripts/menu.js"></script>
-    <script>
-        System.import('./app/environment_main.js').catch(function(err){ console.error(err); });
-    </script>
 </head>
 
 <body>
     <estiaccess>Loading AppComponent content here ...</estiaccess>
     <script>
-        var htmlStuff = getMenuHTML("./vars.js");
-        document.getElementById('list').innerHTML += htmlStuff;
-
         function showMainMenu(){
             document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
             "Name: <input type = \"text\" name=\"name\"><br>" +
