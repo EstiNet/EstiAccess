@@ -19,7 +19,7 @@
     <script src="../scripts/console.js"></script>
     <title>EstiAccess</title>
 </head>
-<body>
+<body ng-app="apps">
 <div id="wrapper">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -33,7 +33,7 @@
         <div class="container-fluid" id="container-f">
             <div class="panel panel-default">
                 <div class="panel-heading">Console Output</div>
-                <div class="panel-body">
+                <div class="panel-body" id="commandwindow">
                     Panel content
                 </div>
             </div>
@@ -51,5 +51,8 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="../renderer.js"></script>
+<script>
+    document.getElementById('list').innerHTML += getMenuHTML("../main.js");
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = class AppComponent {
+            let AppComponent = class AppComponent {
             };
             AppComponent = __decorate([
                 core_1.Component({

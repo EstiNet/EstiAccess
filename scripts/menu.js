@@ -1,12 +1,15 @@
-function getMenuHTML(){
-    sessionArray.forEach(function(element){
-        retur += '<li><a href="#session" onclick="sessionClick(this.id)" id=' + element.name + '>' + element.name + '</a></li>'
+function getMenuHTML(filename){
+    const util = require(filename);
+    console.log("yay");
+    util.sessionArray.forEach(function(elements){
+        console.log(elements);
+        retur += '<li><a href="#session" onclick="sessionClick(elements)" id=' + elements.name + '>' + elements.name + '</a></li>'
     });
 }
-function sessionClick(element){
-    const util = require("../main.js");
+function sessionClick(element, filename){
+    const util = require(filename);
     util.curOpenSession = util.getSessionIDFromName(element.name);
-    var app = angular.module("EstiAccess", ["ngRoute"]);
+    const app = angular.module("apps", ["ngRoute"]);
     app.config(function($routeProvider) {
         $routeProvider
             .when("/session", {

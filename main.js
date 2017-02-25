@@ -10,7 +10,6 @@ const path = require('path');
 const url = require('url');
 
 const storage = require('./storage');
-import * as sessionArray from "rxjs";
 
 var exports = module.exports = {};
 
@@ -21,7 +20,7 @@ exports.sessions = [];
 exports.sessionLog = [];
 
 exports.getSessionIDFromName = function (name) {
-    sessionArray.forEach(function (element) {
+    exports.sessionArray.forEach(function (element) {
         if (element.name == name) {
             return element.socketid;
         }
@@ -85,15 +84,15 @@ app.on('activate', function () {
     }
 })
 
-global.sessionArray.forEach(function (element) {
-    var socket = require('socket.io-client')('http://' + element.ip + ":" + global.port);
+exports.sessionArray.forEach(function (element) {
+    var socket = require('./node_modules/socket.io-client')('http://' + element.ip + ":" + global.port);
     socket.on('connect', function () {
         socket.emit('hello', element.password, function (data) {
             if (data.equals("authed")) {
                 console.log("Connected!")
-                global.sessionOnline[socket.id] = true;
+                exports.sessionOnline[socket.id] = true;
                 socket.emit('curlogs', function (data) {
-                    global.sessionLog[socket.id] = data;
+                    exports.sessionLog[socket.id] = data;
                 });
             }
             else {
@@ -102,13 +101,13 @@ global.sessionArray.forEach(function (element) {
         });
     });
     socket.on('log', function (data) {
-        global.sessionLog[socket.id] += data;
+        exports.sessionLog[socket.id] += data;
     });
     socket.on('disconnect', function () {
-        global.sessionOnline[socket.id] = false;
+        exports.sessionOnline[socket.id] = false;
     })
-    global.sessions[socket.id] = socket;
-    global.sessionOnline[socket.id] = false;
-    global.sessionLog[socket.id] = "";
+    exports.sessions[socket.id] = socket;
+    exports.sessionOnline[socket.id] = false;
+    exports.sessionLog[socket.id] = "";
     socket.connect();
 });

@@ -23,19 +23,10 @@
     <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <script>
-        System.config({
-            transpiler: 'typescript',
-            typescriptOptions: { emitDecoratorMetadata: true },
-            packages: {'app': {defaultExtension: 'ts'}},
-            map: { 'app': './angular2/src/app' }
-        });
-        System.import('app/environment_main')
-            .then(null, console.error.bind(console));
-    </script>
+    <script src="scripts/menu.js"></script>
 </head>
 
-<body>
+<body ng-app="apps">
     <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -56,9 +47,7 @@
 	<script src="renderer.js"></script>
 
     <script>
-        var menu = require('./menu.js');
-        var menuService = new menu();
-        document.getElementById('list').innerHTML += menuService.getLi()
+        document.getElementById('list').innerHTML += getMenuHTML("./main.js");
 
         function showMainMenu(){
             document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
