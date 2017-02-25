@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Rx, angular-route, angular2-polyfills, angular2.dev, bootstrap, electron-DefinitelyTyped, electron-devtools-installer-DefinitelyTyped, es6-shim, html5shiv, jquery-3.1.1, respond, system, system-polyfills, typescript}" />
+    <file url="PROJECT" libraries="{Rx, angular, angular-route, angular2-polyfills, angular2.dev, bootstrap, electron-DefinitelyTyped, electron-devtools-installer-DefinitelyTyped, es6-shim, html5shiv, jquery-3.1.1, respond, system, system-polyfills, typescript}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

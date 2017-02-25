@@ -22,11 +22,23 @@ System.register(["angular2/core"], function(exports_1, context_1) {
             };
             AppComponent = __decorate([
                 core_1.Component({
-                    selector: 'EstiAccess'
+                    selector: 'estiaccess',
+                    template: `<div id="wrapper">
+                    <div id="sidebar-wrapper">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-brand">
+                                <a onclick="showMainMenu()" href="#"> EstiAccess! </a>
+                            </li>
+                        <div id="list"></div>
+                        </ul>
+                    </div>
+                <div id="page-content-wrapper">
+            <div class="container-fluid" id="container-f"></div>
+        </div>
+    </div>
+    <hr />`
                 }),
-                core_1.View({
-                    template: '<h2>My First Angular 2 App</h2>'
-                }), 
+                core_1.View({}), 
                 __metadata('design:paramtypes', [])
             ], AppComponent);
             exports_1("AppComponent", AppComponent);
