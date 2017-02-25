@@ -14,5 +14,13 @@
     <orderEntry type="library" name="respond" level="application" />
     <orderEntry type="library" name="jquery-3.1.1" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="system-polyfills" level="application" />
+    <orderEntry type="library" name="typescript" level="application" />
+    <orderEntry type="library" name="es6-shim" level="application" />
+    <orderEntry type="library" name="angular2-polyfills" level="application" />
+    <orderEntry type="library" name="system" level="application" />
+    <orderEntry type="library" name="Rx" level="application" />
+    <orderEntry type="library" name="angular2.dev" level="application" />
+    <orderEntry type="library" name="angular-route" level="application" />
   </component>
 </module>

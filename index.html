@@ -15,12 +15,28 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.6/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: {'app': {defaultExtension: 'ts'}},
+            map: { 'app': './angular2/src/app' }
+        });
+        System.import('app/environment_main')
+            .then(null, console.error.bind(console));
+    </script>
 </head>
 
 <body>
     <div id="wrapper">
-
-        <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -31,15 +47,10 @@
                  <div id="list"></div>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid" id="container-f">
-                
-            </div>
+            <div class="container-fluid" id="container-f"></div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
 		<hr />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="renderer.js"></script>
@@ -48,21 +59,7 @@
         var menu = require('./menu.js');
         var menuService = new menu();
         document.getElementById('list').innerHTML += menuService.getLi()
-        
-        function sessionClick(element){
-            var remote = require('electron').remote; 
-            document.getElementById('container-f').innerHTML = "<textarea readonly>" +
-            remote.getGlobal('sessionLog')[remote.getGlobal('sessionFromName')[element]] +
-            "</textarea>" +
-            "<form>"+
-            "<input type = \"text\" name=\"consoleOut\" placeholder=\"Type here.\">"+
-            "<input type = \"submit\" onclick=\"submitText(this.form)\" value=\"Submit\">"+
-            "</form>";
-        }
 
-        function submitText(element){
-
-        }
         function showMainMenu(){
             document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
             "Name: <input type = \"text\" name=\"name\"><br>" +

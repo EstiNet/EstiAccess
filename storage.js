@@ -27,7 +27,7 @@ var storageService = function(){
 }
 
 self.createSession = function (name, ip, port, password){
-    var json = {'name': name, 'ip': ip, 'port': port, 'password': password}
+    var json = {'name': name, 'ip': ip, 'port': port, 'password': password, 'socketid': -1};
     var fs = require('fs');
     fs.writeFile("sessions/" + name + ".json", json)
     self.sessionArray.push(json)
