@@ -5,7 +5,7 @@ function getMenuHTML(filename){
     var retur = "";
     util.sessionArray.forEach(function(elements){
         console.log(elements);
-        retur += '<li><a href="#session" onclick=sessionClick(this) id=' + elements.name + '>' + elements.name + '</a></li>'
+        retur += '<li><a href="#session" onclick=sessionClick(this) [routerLink]="[\'Heroes\']" id=' + elements.name + '>' + elements.name + '</a></li>'
     });
     return retur;
 }
