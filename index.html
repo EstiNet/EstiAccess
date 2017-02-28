@@ -8,77 +8,86 @@
     <meta name="description" content="">
     <meta name="author" content="EspiDev">
     <title>EstiAccess</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
-    <script src="node_modules/@angular/core/core.umd.js"></script>
-    <script src="node_modules/@angular/common/common.umd.js"></script>
-    <script src="node_modules/@angular/compiler/compiler.umd.js"></script>
-    <script src="node_modules/@angular/platform-browser/platform-browser.umd.js"></script>
-    <script src="node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="app/angu.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="renderer.js"></script>
     <script src="scripts/menu.js"></script>
 </head>
 
 <body>
-    <estiaccess>Loading AppComponent content here ...</estiaccess>
-    <script>
-        function showMainMenu(){
-            document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a onclick="showMainMenu()" href="#">EstiAccess</a>
+            </li>
+            <!--<ul style="overflow:hidden; overflow-y:scroll">-->
+            <div id="list"></div>
+            <!--</ul>-->
+            <li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true" style="left: 75px;"></span></a>
+            </li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid" id="container-f">
+
+        </div>
+    </div>
+</div>
+<hr/>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script>
+    document.getElementById('list').innerHTML += getMenuHTML("./vars.js");
+    function showMainMenu() {
+        document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
             "Name: <input type = \"text\" name=\"name\"><br>" +
             "IP:   <input type = \"text\" name=\"ip\"><br>" +
             "Port: <input type = \"text\" name=\"port\"><br>" +
             "Password: <input type = \"text\" name=\"password\"><br>" +
-            "<input type = \"submit\" value=\"Submit\">"+
+            "<input type = \"submit\" value=\"Submit\">" +
             "</form>";
+    }
+    function onMainMenuSubmission() {
+        console.log("Processing MainMenuSubmission...");
+        var remote = require('electron').remote;
+        var name = document.forms["createServer"]["name"].value;
+        var ip = document.forms["createServer"]["ip"].value;
+        var port = document.forms["createServer"]["port"].value;
+        var password = document.forms["createServer"]["password"].value;
+        if (name == "") {
+            console.log("Fill out name plz.");
+            alert("Name must be filled out.");
+            return false;
         }
-        function onMainMenuSubmission(){
-            console.log("Processing MainMenuSubmission...");
-            var remote = require('electron').remote;
-            var name = document.forms["createServer"]["name"].value;
-            var ip = document.forms["createServer"]["ip"].value;
-            var port = document.forms["createServer"]["port"].value;
-            var password = document.forms["createServer"]["password"].value;
-            if (name == "") {
-                console.log("Fill out name plz.");
-                alert("Name must be filled out.");
-                return false;
-            }
-            else if(remote.getGlobal('sessionFromName')[name] != null){
-                console.log("Name already exists.");
-                alert("Name already exists.");
-                return false;
-            }
-            else if(ip == ""){
-                console.log("Fill out IP plz.");
-                alert("IP must be filled out.");
-                return false;
-            }
-            else if(port == ""){
-                console.log("Fill out port plz.");
-                alert("Port must be filled out.");
-                return false;
-            }
-            else if(password == ""){
-                console.log("Fill out password plz");
-                alert("Password must be filled out.");
-                return false;
-            }
-            else{
-                console.log("Setup complete!");
-                remote.getGlobal('storage').createSession(name, ip, port, password);
-                alert("Created session " + name + " at " + ip + ":" + port + ".") ;
-            }
+        else if (remote.getGlobal('sessionFromName')[name] != null) {
+            console.log("Name already exists.");
+            alert("Name already exists.");
+            return false;
         }
-     </script>
+        else if (ip == "") {
+            console.log("Fill out IP plz.");
+            alert("IP must be filled out.");
+            return false;
+        }
+        else if (port == "") {
+            console.log("Fill out port plz.");
+            alert("Port must be filled out.");
+            return false;
+        }
+        else if (password == "") {
+            console.log("Fill out password plz");
+            alert("Password must be filled out.");
+            return false;
+        }
+        else {
+            console.log("Setup complete!");
+            remote.getGlobal('storage').createSession(name, ip, port, password);
+            alert("Created session " + name + " at " + ip + ":" + port + ".");
+        }
+    }
+</script>
 </body>
 </html>

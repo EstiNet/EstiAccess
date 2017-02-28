@@ -1,3 +1,6 @@
+import {RouterOutlet} from "@angular/router/src/directives/router_outlet";
+import {RouterLink} from "@angular/router/src/directives/router_link";
+import {Router} from "@angular/router/src/router";
 (function () {
 
     var serverMenu = ng.core.Component({
@@ -9,9 +12,9 @@
 
             }
         });
-
     var HelloApp = ng.core.Component({
                 selector: 'estiaccess',
+                directives: [RouterOutlet, RouterLink],
                 template: `<div id="wrapper">
                            <div id="sidebar-wrapper">
                            <ul class="sidebar-nav">
@@ -33,18 +36,19 @@
 <hr />`
             })
             .Class({
-                constructor: function(/*router*/) {
-                    /*router.config([
+                constructor: function(router) {
+                    router.config([
                         //{ path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true },
                         { path: '/serverMenu', name: 'serverMenu', component: serverMenu }
-                    ]);*/
+                    ]);
                     this.htmlStuff = getMenuHTML("./vars.js");
                 }
             });
-    var routes = [
+    HelloApp.parameters = [Router];
+    /*var routes = [
         { path: '/serverMenu', component: serverMenu }
     ];
-    var routing = ng.router.RouterModule.forRoot(routes);
+    var routing = ng.router.RouterModule.forRoot(routes);*/
     document.addEventListener('DOMContentLoaded', function () {
         ng.platformBrowserDynamic.bootstrap(HelloApp);
     });
