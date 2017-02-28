@@ -13,22 +13,18 @@
   "author": "EspiDev",
   "license": "CC0-1.0",
   "dependencies": {
-    "core-js": "^2.4.0",
-    "zone.js": "0.6.12",
+    "core-js": "^2.4.1",
+    "zone.js": "^0.7.4",
     "reflect-metadata": "0.1.3",
-    "rxjs": "5.0.0-beta.6",
+    "rxjs": "5.0.1",
 
-    "@angular/core":  "2.0.0-rc.1",
-    "@angular/common":  "2.0.0-rc.1",
-    "@angular/compiler":  "2.0.0-rc.1",
-    "@angular/platform-browser":  "2.0.0-rc.1",
-    "@angular/platform-browser-dynamic":  "2.0.0-rc.1"
+    "bootstrap": "3.3.7",
+    "systemjs": "0.19.40"
   },
   "devDependencies": {
     "electron": "^1.4.1",
     "concurrently": "^2.0.0",
     "lite-server": "^2.1.0",
-    "typescript": "^1.7.5",
     "typings":"^0.6.8"
   }
 }

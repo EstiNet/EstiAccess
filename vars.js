@@ -12,5 +12,5 @@ expor.getSessionIDFromName = function (name) {
             return element.socketid;
         }
     });
-    return null;
+    return -1;
 };
