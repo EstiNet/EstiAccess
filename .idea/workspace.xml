@@ -2,8 +2,291 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1fd0b73-3d99-4edd-bae5-c0888316fc5f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/addServer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/addServer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/landing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/mainPage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_decorator.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_decorator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_decorator.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_impl.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_impl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_impl.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_normalizer.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_normalizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_config/route_config_normalizer.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_definition.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_definition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_definition.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_registry.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_registry.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/route_registry.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/router_providers_common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/router_providers_common.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/async_route_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/async_route_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/async_route_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/route_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/route_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/route_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/sync_route_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/sync_route_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_handlers/sync_route_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/param_route_path.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/param_route_path.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/param_route_path.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/regex_route_path.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/regex_route_path.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/regex_route_path.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/route_path.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/route_path.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/route_paths/route_path.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/rule_set.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/rule_set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/rule_set.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/rules.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/rules.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/rules/rules.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/url_parser.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/url_parser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/url_parser.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/utils.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/src/utils.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/testing.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/testing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/esm/testing.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/index.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/router.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/router.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/directives/router_link.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/directives/router_link.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/directives/router_link.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/directives/router_outlet.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/directives/router_outlet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/directives/router_outlet.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/async.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/async.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/async.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/base_wrapped_exception.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/base_wrapped_exception.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/base_wrapped_exception.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/collection.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/collection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/collection.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/exception_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/exception_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/exception_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/exceptions.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/exceptions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/exceptions.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/lang.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/lang.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/lang.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/promise.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/promise.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/facade/promise.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/instruction.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/instruction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/instruction.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/interfaces.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/interfaces.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/interfaces.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/lifecycle_annotations.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/lifecycle_annotations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/lifecycle_annotations.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/lifecycle_annotations_impl.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/lifecycle_annotations_impl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/lifecycle_annotations_impl.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/route_lifecycle_reflector.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/route_lifecycle_reflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/lifecycle/route_lifecycle_reflector.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_decorator.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_decorator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_decorator.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_impl.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_impl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_impl.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_normalizer.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_normalizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_config/route_config_normalizer.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_definition.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_definition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_definition.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_registry.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_registry.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/route_registry.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router_providers.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router_providers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router_providers.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router_providers_common.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router_providers_common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/router_providers_common.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/async_route_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/async_route_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/async_route_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/route_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/route_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/route_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/sync_route_handler.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/sync_route_handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_handlers/sync_route_handler.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/param_route_path.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/param_route_path.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/param_route_path.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/regex_route_path.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/regex_route_path.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/regex_route_path.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/route_path.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/route_path.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/route_paths/route_path.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/rule_set.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/rule_set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/rule_set.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/rules.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/rules.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/rules/rules.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/url_parser.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/url_parser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/url_parser.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/utils.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/src/utils.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/testing.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/testing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router-deprecated/testing.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/bundles/router.umd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/bundles/router.umd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/index.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/index.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/apply_redirects.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/apply_redirects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/apply_redirects.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/apply_redirects.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/common_router_providers.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/common_router_providers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/common_router_providers.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/common_router_providers.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/config.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/config.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/create_router_state.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/create_router_state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/create_router_state.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/create_url_tree.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/create_url_tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/create_url_tree.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link_active.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link_active.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link_active.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_link_active.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_outlet.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_outlet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_outlet.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/directives/router_outlet.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/interfaces.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/interfaces.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/interfaces.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/recognize.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/recognize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/recognize.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/recognize.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/resolve.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/resolve.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/resolve.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/resolve.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_config_loader.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_config_loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_config_loader.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_config_loader.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_module.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_module.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_module.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_outlet_map.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_outlet_map.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_outlet_map.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_providers.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_providers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_providers.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_providers.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_state.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/router_state.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/shared.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/shared.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/shared.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/shared.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/url_tree.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/url_tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/url_tree.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/url_tree.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/collection.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/collection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/collection.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/collection.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/tree.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/src/utils/tree.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing/router_testing_module.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing/router_testing_module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing/router_testing_module.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/esm/testing/router_testing_module.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/index.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/index.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/apply_redirects.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/apply_redirects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/apply_redirects.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/apply_redirects.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/common_router_providers.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/common_router_providers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/common_router_providers.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/common_router_providers.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/config.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/config.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/create_router_state.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/create_router_state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/create_router_state.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/create_url_tree.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/create_url_tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/create_url_tree.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link_active.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link_active.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link_active.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_link_active.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_outlet.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_outlet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_outlet.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/directives/router_outlet.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/interfaces.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/@angular/router/src/interfaces.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/mainPage.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular2/LICENSE" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular2/README.md" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular2/animate.d.ts" afterPath="" />
@@ -1920,17 +2203,14 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular2/web_worker/worker.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular2/web_worker/worker.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/angu.js" afterPath="$PROJECT_DIR$/app/angu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/serverset.html" afterPath="$PROJECT_DIR$/html/serverset.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/addServer.html" afterPath="$PROJECT_DIR$/html/addServer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/@angular/common/package.json" afterPath="$PROJECT_DIR$/node_modules/@angular/common/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/@angular/compiler/package.json" afterPath="$PROJECT_DIR$/node_modules/@angular/compiler/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/@angular/core/package.json" afterPath="$PROJECT_DIR$/node_modules/@angular/core/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/@angular/platform-browser-dynamic/package.json" afterPath="$PROJECT_DIR$/node_modules/@angular/platform-browser-dynamic/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/@angular/platform-browser/package.json" afterPath="$PROJECT_DIR$/node_modules/@angular/platform-browser/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/menu.js" afterPath="$PROJECT_DIR$/scripts/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage.js" afterPath="$PROJECT_DIR$/storage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vars.js" afterPath="$PROJECT_DIR$/vars.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -1951,34 +2231,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loader.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/loader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="71" lean-forward="false" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="330">
+              <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="506">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1993,65 +2283,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addServer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addServer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/addServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addServer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/addServer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-3.1.1.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/jquery-3.1.1.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="1" column="1486" lean-forward="true" selection-start-line="1" selection-start-column="1486" selection-end-line="1" selection-end-column="1486" />
+            <state relative-caret-position="719">
+              <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1488247803966" expanded="true" signature="709:716" ph="×" />
+                <marker date="1488247803966" expanded="true" signature="1065:1072" ph="×" />
+                <marker date="1488247803966" expanded="true" signature="1388:1395" ph="×" />
+                <marker date="1488247803966" expanded="true" signature="1715:1722" ph="×" />
+                <marker date="1488247803966" expanded="true" signature="2044:2051" ph="×" />
+                <marker date="1488247803966" expanded="true" signature="2461:2468" ph="×" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <file leaf-file-name="mainPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/mainPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/console.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="73" lean-forward="false" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
+            <state relative-caret-position="110">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serverset.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/serverset.html">
+      <file leaf-file-name="mainPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/mainPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="110">
+              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -2064,8 +2349,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="TypeScript File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -2074,6 +2359,8 @@
       <find>exports</find>
       <find>elements</find>
       <find>router</find>
+      <find>remote</find>
+      <find>storage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2088,22 +2375,25 @@
         <option value="$PROJECT_DIR$/typings.json" />
         <option value="$PROJECT_DIR$/scripts/console.js" />
         <option value="$PROJECT_DIR$/scripts/loader.js" />
-        <option value="$PROJECT_DIR$/storage.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/vars.js" />
         <option value="$PROJECT_DIR$/scripts/menu.ts" />
         <option value="$PROJECT_DIR$/app/environment_app.component.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/environment_main.ts" />
         <option value="$PROJECT_DIR$/css/simple-sidebar.css" />
         <option value="$PROJECT_DIR$/app/serverMenu.js" />
         <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/app/angu.js" />
         <option value="$PROJECT_DIR$/html/serverset.html" />
-        <option value="$PROJECT_DIR$/scripts/menu.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/html/addServer.html" />
+        <option value="$PROJECT_DIR$/test" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/vars.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/storage.js" />
+        <option value="$PROJECT_DIR$/scripts/menu.js" />
+        <option value="$PROJECT_DIR$/scripts/mainPage.js" />
         <option value="$PROJECT_DIR$/scripts/addServer.js" />
+        <option value="$PROJECT_DIR$/html/mainPage.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -2206,49 +2496,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EstiAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EstiAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EstiAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EstiAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EstiAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EstiAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2272,6 +2520,9 @@
     <property name="javascript.nodejs.core.library.configured.version" value="4.5.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\devin_000\Desktop\Flow\EstiAccess\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\devin_000\Desktop\Flow\EstiAccess\html" />
     </key>
@@ -2393,12 +2644,12 @@
       <workItem from="1488140095378" duration="597000" />
       <workItem from="1488229427465" duration="363000" />
       <workItem from="1488229881907" duration="752000" />
-      <workItem from="1488237244313" duration="5919000" />
+      <workItem from="1488237244313" duration="8349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40476000" />
+    <option name="totallyTimeSpent" value="42906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2444,40 +2695,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="71" lean-forward="false" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/web-forms2.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10714">
-          <caret line="487" column="22" lean-forward="false" selection-start-line="487" selection-start-column="22" selection-end-line="487" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/simple-sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
@@ -2491,7 +2708,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#0#74#0" expanded="false" />
             <marker date="1488243445058" expanded="true" signature="599:1358" ph="..." />
             <marker date="1488243445058" expanded="true" signature="653:1192" ph="..." />
             <marker date="1488243445058" expanded="true" signature="705:1181" ph="..." />
@@ -2535,24 +2752,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estiaccess.js" />
-    <entry file="file://$PROJECT_DIR$/typings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/renderer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="56" lean-forward="true" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -2630,13 +2833,6 @@
     <entry file="file://$PROJECT_DIR$/scripts/menu.js.map" />
     <entry file="file://$PROJECT_DIR$/app/environment_app.component.ts" />
     <entry file="file://$PROJECT_DIR$/app/environment_main.ts" />
-    <entry file="file://$PROJECT_DIR$/npm-debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -2681,22 +2877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="120" column="13" lean-forward="false" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -3459,20 +3639,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/angu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="62" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#0#74#0" expanded="false" />
             <marker date="1488243445058" expanded="true" signature="599:1358" ph="..." />
             <marker date="1488243445058" expanded="true" signature="653:1192" ph="..." />
             <marker date="1488243445058" expanded="true" signature="705:1181" ph="..." />
@@ -3505,7 +3677,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3515,34 +3687,8 @@
         <state relative-caret-position="242">
           <caret line="1" column="1486" lean-forward="true" selection-start-line="1" selection-start-column="1486" selection-end-line="1" selection-end-column="1486" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3556,17 +3702,132 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/addServer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        <state relative-caret-position="308">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/npm-debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sessions/dgas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/mainPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/addServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="719">
+          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <marker date="1488247803966" expanded="true" signature="709:716" ph="×" />
+            <marker date="1488247803966" expanded="true" signature="1065:1072" ph="×" />
+            <marker date="1488247803966" expanded="true" signature="1388:1395" ph="×" />
+            <marker date="1488247803966" expanded="true" signature="1715:1722" ph="×" />
+            <marker date="1488247803966" expanded="true" signature="2044:2051" ph="×" />
+            <marker date="1488247803966" expanded="true" signature="2461:2468" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

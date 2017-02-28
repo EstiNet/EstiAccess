@@ -15,23 +15,27 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="renderer.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/addServer.js"></script>
+    <script src="scripts/mainPage.js"></script>
 </head>
 
 <body>
+<script src="./js/jquery-3.1.1.min.js"></script>
 <div id="wrapper">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a onclick="showMainMenu()" href="#">EstiAccess</a>
+                <a onclick="loadMainPage()" href="#">EstiAccess</a>
             </li>
             <!--<ul style="overflow:hidden; overflow-y:scroll">-->
             <div id="list"></div>
             <!--</ul>-->
-            <li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true" style="left: 75px;"></span></a>
+            <li><a href="#" onclick="loadAddServer()"><span class="glyphicon glyphicon-plus" aria-hidden="true" style="left: 75px;"></span></a>
             </li>
         </ul>
     </div>
     <div id="page-content-wrapper">
+        <div id="alert"></div>
         <div class="container-fluid" id="container-f">
 
         </div>
@@ -41,53 +45,7 @@
 <script src="./js/jquery-3.1.1.min.js"></script>
 <script>
     document.getElementById('list').innerHTML += getMenuHTML("./vars.js");
-    function showMainMenu() {
-        document.getElementById('container-f').innerHTML = "<h2>Add Server</h2><br><form name=\"createServer\" action=\"onMainMenuSubmission()\" onsubmit=\"return onMainMenuSubmission()\">" +
-            "Name: <input type = \"text\" name=\"name\"><br>" +
-            "IP:   <input type = \"text\" name=\"ip\"><br>" +
-            "Port: <input type = \"text\" name=\"port\"><br>" +
-            "Password: <input type = \"text\" name=\"password\"><br>" +
-            "<input type = \"submit\" value=\"Submit\">" +
-            "</form>";
-    }
-    function onMainMenuSubmission() {
-        console.log("Processing MainMenuSubmission...");
-        var remote = require('electron').remote;
-        var name = document.forms["createServer"]["name"].value;
-        var ip = document.forms["createServer"]["ip"].value;
-        var port = document.forms["createServer"]["port"].value;
-        var password = document.forms["createServer"]["password"].value;
-        if (name == "") {
-            console.log("Fill out name plz.");
-            alert("Name must be filled out.");
-            return false;
-        }
-        else if (remote.getGlobal('sessionFromName')[name] != null) {
-            console.log("Name already exists.");
-            alert("Name already exists.");
-            return false;
-        }
-        else if (ip == "") {
-            console.log("Fill out IP plz.");
-            alert("IP must be filled out.");
-            return false;
-        }
-        else if (port == "") {
-            console.log("Fill out port plz.");
-            alert("Port must be filled out.");
-            return false;
-        }
-        else if (password == "") {
-            console.log("Fill out password plz");
-            alert("Password must be filled out.");
-            return false;
-        }
-        else {
-            console.log("Setup complete!");
-            remote.getGlobal('storage').createSession(name, ip, port, password);
-            alert("Created session " + name + " at " + ip + ":" + port + ".");
-        }
-    }
+    loadMainPage();
 </script>
 </body>
 </html>
