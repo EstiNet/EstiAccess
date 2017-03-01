@@ -8,7 +8,7 @@ function configureServer() {
                     $("#serverSettings").load("./html/serverSettings.html", function () {
                         $("#serverFiles").hide(function () {
                             $("#serverSettings").hide(function () {
-                                $("#container-f").fadeIn(400);
+                                $("#container-f").fadeIn(300);
                             });
                         });
                     });
