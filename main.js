@@ -19,6 +19,10 @@ let mainWindow;
 storage.indexStorage();
 console.log("Indexed storage.");
 
+util.configureArray.forEach(function(element){
+    util.startSocket(element);
+});
+
 function createWindow() {
     console.log("Creating window...");
 
@@ -64,32 +68,4 @@ electron.app.on('activate', function () {
     if (mainWindow === null) {
         createWindow()
     }
-});
-
-util.sessionArray.forEach(function (element) {
-    var socket = require('./node_modules/socket.io-client')('http://' + element.ip + ":" + global.port);
-    socket.on('connect', function () {
-        socket.emit('hello', element.password, function (data) {
-            if (data.equals("authed")) {
-                console.log("Connected!")
-                util.sessionOnline[socket.id] = true;
-                socket.emit('curlogs', function (data) {
-                    util.sessionLog[socket.id] = data;
-                });
-            }
-            else {
-                console.log("Failed to connect!");
-            }
-        });
-    });
-    socket.on('log', function (data) {
-        util.sessionLog[socket.id] += data;
-    });
-    socket.on('disconnect', function () {
-        util.sessionOnline[socket.id] = false;
-    })
-    util.sessions[socket.id] = socket;
-    util.sessionOnline[socket.id] = false;
-    util.sessionLog[socket.id] = "";
-    socket.connect();
 });
