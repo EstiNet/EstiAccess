@@ -61,7 +61,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: "Segoe UI Light", sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .sidebar-nav li {
@@ -90,6 +90,7 @@
     height: 65px;
     font-size: 18px;
     line-height: 60px;
+    background: #22a3b7;
 }
 
 .sidebar-nav > .sidebar-brand a {
