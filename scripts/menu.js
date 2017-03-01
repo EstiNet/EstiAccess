@@ -12,5 +12,5 @@ function getMenuHTML(filename){
 function sessionClick(element){
     const util = require(filenam);
     util.curOpenSession = util.getSessionIDFromName(element.name);
-    openConsoleLog();
+    configureServer();
 }

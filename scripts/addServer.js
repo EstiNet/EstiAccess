@@ -1,8 +1,11 @@
 function loadAddServer(){
     const util = require("./vars.js");
     util.curOpenSession = -1;
-    $( "#data" ).remove();
-    $( "#container-f" ).load( "./html/addServer.html", function() {});
+    $( "#container-f" ).fadeOut(300, function(){
+        $( "#container-f" ).load( "./html/addServer.html", function() {
+            $( "#container-f" ).fadeIn(300);
+        });
+    });
 }
 function verify(){
     var name = document.getElementById("uName").value;
