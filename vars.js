@@ -20,7 +20,7 @@ expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
     console.log("Starting connection with " + socketOb.name + "...");
     var io = require('socket.io-client'), socket = io.connect('http://' + socketOb.ip, {port: socketOb.port});
-    socket.on('connect', function () {
+    socket.on('connection', function () {
         console.log("Found connection with " + socketOb.name + "!");
         util.sessionOnline[socket.id] = true;
         socket.emit('hello', socketOb.password, function (data) {
@@ -48,4 +48,5 @@ expor.startSocket = function (socketOb) {
     util.sessionArray[socket.id] = {'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id};
     socket.connect();
     console.log("Finish method " + socketOb.name + "!");
+    console.log(util.sessionArray);
 };
