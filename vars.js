@@ -18,8 +18,10 @@ expor.getSessionIDFromName = function (name) {
 
 expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
-    var socket = require('./node_modules/socket.io-client')('http://' + socketOb.ip + ":" + socketOb.port);
+    console.log("Starting connection with " + socketOb.name + "...");
+    var io = require('socket.io-client'), socket = io.connect('http://' + socketOb.ip, {port: socketOb.port});
     socket.on('connect', function () {
+        console.log("Found connection with " + socketOb.name + "!");
         util.sessionOnline[socket.id] = true;
         socket.emit('hello', socketOb.password, function (data) {
             if (data.equals("authed")) {
@@ -45,4 +47,5 @@ expor.startSocket = function (socketOb) {
     util.sessionLog[socket.id] = "";
     util.sessionArray[socket.id] = {'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id};
     socket.connect();
+    console.log("Finish method " + socketOb.name + "!");
 };
