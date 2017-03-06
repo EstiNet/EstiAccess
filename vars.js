@@ -7,13 +7,13 @@ expor.sessionOnline = [];
 expor.sockets = [];
 expor.sessionLog = [];
 
-expor.getSessionIDFromName = function (name) {
+expor.getSessionNameFromID = function(id) {
     expor.sessionArray.forEach(function (element) {
-        if (element.name == name) {
-            return element.socketid;
+        if(element.socketid == id){
+            return element.name;
         }
     });
-    return -1;
+    return "idunoman";
 };
 
 expor.startSocket = function (socketOb) {
@@ -22,13 +22,13 @@ expor.startSocket = function (socketOb) {
     var io = require('socket.io-client'), socket = io.connect('http://' + socketOb.ip, {port: socketOb.port});
     socket.on('connection', function () {
         console.log("Found connection with " + socketOb.name + "!");
-        util.sessionOnline[socket.id] = true;
+        util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;
         socket.emit('hello', socketOb.password, function (data) {
             if (data.equals("authed")) {
                 console.log("Connected!");
-                util.sessionOnline[socket.id] = true;
+                util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;
                 socket.emit('curlogs', function (data) {
-                    util.sessionLog[socket.id] = data;
+                    util.sessionLog[expor.getSessionNameFromID(socket.id)] = data;
                 });
             }
             else {
@@ -37,15 +37,15 @@ expor.startSocket = function (socketOb) {
         });
     });
     socket.on('log', function (data) {
-        util.sessionLog[socket.id] += data;
+        util.sessionLog[expor.getSessionNameFromID(socket.id)] += data;
     });
     socket.on('disconnect', function () {
-        util.sessionOnline[socket.id] = false;
+        util.sessionOnline[expor.getSessionNameFromID(socket.id)] = false;
     });
-    util.sockets[socket.id] = socket;
-    util.sessionOnline[socket.id] = false;
-    util.sessionLog[socket.id] = "";
-    util.sessionArray[socket.id] = {'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id};
+    util.sockets[expor.getSessionNameFromID(socket.id)] = socket;
+    util.sessionOnline[expor.getSessionNameFromID(socket.id)] = false;
+    util.sessionLog[expor.getSessionNameFromID(socket.id)] = "";
+    util.sessionArray[expor.getSessionNameFromID(socket.id)] = {'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id};
     socket.connect();
     console.log("Finish method " + socketOb.name + "!");
     console.log(util.sessionArray);
