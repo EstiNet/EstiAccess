@@ -44,8 +44,8 @@ expor.startSocket = function (socketOb) {
     });
     util.sockets.SortedMap.set(socketOb.name, socket);
     util.sessionOnline.SortedMap.set(socketOb.name, false);
-    util.sessionLog[expor.getSessionNameFromID(socket.id)] = "";
-    util.sessionArray[expor.getSessionNameFromID(socket.id)] = {'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id};
+    util.sessionLog.SortedMap.set(socketOb.name, "");
+    util.sessionArray.SortedMap.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
     socket.connect();
     console.log("Finish method " + socketOb.name + "!");
     console.log(util.sessionArray);

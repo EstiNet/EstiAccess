@@ -39,7 +39,5 @@ function verify(){
         document.getElementById("alert").innerHTML = '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Created a new server listing!</div>';
         document.getElementById('list').innerHTML = getMenuHTML("./vars.js");
         loadMainPage();
-        var vars = require('./vars.js');
-        vars.startSocket({'name': name, 'ip': ip, 'port': port, 'password': pass});
     }
 }
