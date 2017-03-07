@@ -11,6 +11,10 @@ function getMenuHTML(filename){
 }
 function sessionClick(element){
     const util = require(filenam);
-    util.curOpenSession = util.getSessionIDFromName(element.name);
+    util.curOpenSession = element.name;
     configureServer();
+}
+function close(){
+    document.getElementById("alert").innerHTML = "";
+    console.log("closing alert.");
 }
