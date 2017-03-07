@@ -1,11 +1,11 @@
 const expor = module.exports = {};
 
 expor.configureArray = [{'name': 'test', 'ip': 'localhost', 'port': '1', 'password': 'help'}];
-expor.sessionArray = [];
+expor.sessionArray = require("collections/sorted-map");
 expor.curOpenSession = -1;
-expor.sessionOnline = [];
-expor.sockets = [];
-expor.sessionLog = [];
+expor.sessionOnline = require("collections/sorted-map");
+expor.sockets = require("collections/sorted-map");
+expor.sessionLog = require("collections/sorted-map");
 
 expor.getSessionNameFromID = function(id) {
     expor.sessionArray.forEach(function (element) {
@@ -26,9 +26,9 @@ expor.startSocket = function (socketOb) {
         socket.emit('hello', socketOb.password, function (data) {
             if (data.equals("authed")) {
                 console.log("Connected!");
-                util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;
+                util.sessionOnline.SortedMap.set(socketOb.name, true);
                 socket.emit('curlogs', function (data) {
-                    util.sessionLog[expor.getSessionNameFromID(socket.id)] = data;
+                    util.sessionLog.SortedMap.set(socketOb.name, data);
                 });
             }
             else {
@@ -37,13 +37,13 @@ expor.startSocket = function (socketOb) {
         });
     });
     socket.on('log', function (data) {
-        util.sessionLog[expor.getSessionNameFromID(socket.id)] += data;
+        util.sessionLog.SortedMap.set(socketOb.name, data);
     });
     socket.on('disconnect', function () {
-        util.sessionOnline[expor.getSessionNameFromID(socket.id)] = false;
+        util.sessionOnline.SortedMap.set(socketOb.name, false);
     });
-    util.sockets[expor.getSessionNameFromID(socket.id)] = socket;
-    util.sessionOnline[expor.getSessionNameFromID(socket.id)] = false;
+    util.sockets.SortedMap.set(socketOb.name, socket);
+    util.sessionOnline.SortedMap.set(socketOb.name, false);
     util.sessionLog[expor.getSessionNameFromID(socket.id)] = "";
     util.sessionArray[expor.getSessionNameFromID(socket.id)] = {'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id};
     socket.connect();

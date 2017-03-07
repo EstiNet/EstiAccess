@@ -6,5 +6,4 @@ function loadMainPage(){
             $( "#container-f" ).fadeIn(300);
         });
     });
-
 }
