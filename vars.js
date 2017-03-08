@@ -36,8 +36,17 @@ expor.startSocket = function (socketOb) {
             }
         });
     });
-    socket.on('log', function (data) {
+    socket.on('connect_error', function (data){
+       console.log("[Error Connect] " + data);
+    });
+    socket.on('error', function (data){
+        console.log("[Error] " + data + " " + socketOb.name);
+    });
+    socket.on('curlogs', function (data){
         util.sessionLog.SortedMap().set(socketOb.name, data);
+    });
+    socket.on('log', function (data) {
+        util.sessionLog.SortedMap().set(socketOb.name, util.sessionLog.SortedMap().get(socketOb.name) + data);
     });
     socket.on('disconnect', function () {
         util.sessionOnline.SortedMap().set(socketOb.name, false);

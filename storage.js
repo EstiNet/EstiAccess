@@ -10,17 +10,19 @@ expor.indexStorage = function () {
         fs.mkdirSync(dir);
     }
     fs.readdir(dir, (err, files) => {
-        files.forEach(file => {
-            file = "./sessions/" + file;
-            fs = require('fs');
+        for(var i = 0; i <files.length; i++){
+            var file = files[i];
+            console.log(file);
             const jsonFile = require('jsonfile');
-            jsonfile.readFile(file, function(err, obj) {
+            jsonfile.readFile("./sessions/" + file, function(err, obj) {
+                console.log(obj);
                 if (err) {
                     return console.log(err);
                 }
-                util.configureArray.push(obj)
+                util.configureArray.push(obj);
+                util.startSocket(obj);
             });
-        });
+        }
     });
 };
 

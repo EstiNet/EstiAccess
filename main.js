@@ -19,6 +19,8 @@ let mainWindow;
 storage.indexStorage();
 console.log("Indexed storage.");
 
+console.log(util.configureArray);
+
 util.configureArray.forEach(function(element){
     util.startSocket(element);
 });
