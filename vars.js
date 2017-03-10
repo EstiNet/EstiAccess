@@ -37,7 +37,7 @@ expor.startSocket = function (socketOb) {
         });
     });
     socket.on('connect_error', function (data){
-       console.log("[Error Connect] " + data);
+       console.log("[Error Connect] " + data + " " + socketOb.name);
     });
     socket.on('error', function (data){
         console.log("[Error] " + data + " " + socketOb.name);

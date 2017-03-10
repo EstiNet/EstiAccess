@@ -23,6 +23,8 @@ expor.indexStorage = function () {
                 util.startSocket(obj);
             });
         }
+        var main = require("./main.js");
+        //main.mainWindow.webContents.send('refreshMenu');
     });
 };
 
