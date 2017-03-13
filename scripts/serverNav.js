@@ -8,6 +8,16 @@ function configureServer() {
                     $("#serverSettings").load("./html/serverSettings.html", function () {
                         $("#serverFiles").hide(function () {
                             updateLog();
+                            document.getElementById('command').onkeypress = function(e){
+                                if (!e) e = window.event;
+                                var keyCode = e.keyCode || e.which;
+                                if (keyCode == '13'){
+                                    console.log('yay');
+                                    submitText();
+                                    return false;
+                                }
+                                console.log('nay');
+                            };
                             $("#serverSettings").hide(function () {
                                 $("#container-f").fadeIn(300);
                             });
