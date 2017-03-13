@@ -7,10 +7,7 @@ function configureServer() {
                 $("#serverFiles").load("./html/serverFiles.html", function () {
                     $("#serverSettings").load("./html/serverSettings.html", function () {
                         $("#serverFiles").hide(function () {
-                            var remote = require('electron').remote;
-                            const util = remote.getGlobal('vars');
-                            document.getElementById('commandwindow').innerHTML = util.sessionLog.get(util.curOpenSession);
-                            document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
+                            updateLog();
                             $("#serverSettings").hide(function () {
                                 $("#container-f").fadeIn(300);
                             });
@@ -21,13 +18,16 @@ function configureServer() {
         });
     });
 }
-function openConsoleLog() {
-    $("#" + serverMenuOpen + "A").removeClass("active");
-    $("#consoleLogA").addClass("active");
+function updateLog() {
     var remote = require('electron').remote;
     const util = remote.getGlobal('vars');
     document.getElementById('commandwindow').innerHTML = util.sessionLog.get(util.curOpenSession);
     document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
+}
+function openConsoleLog() {
+    $("#" + serverMenuOpen + "A").removeClass("active");
+    $("#consoleLogA").addClass("active");
+    updateLog();
     $("#" + serverMenuOpen).fadeOut(300, function () {
         $("#consoleLog").fadeIn(300);
         serverMenuOpen = "consoleLog";
