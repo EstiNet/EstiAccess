@@ -1,14 +1,15 @@
 const expor = module.exports = {};
 
 expor.configureArray = [];
-expor.sessionArray = require("collections/sorted-map");
+var Map = require("collections/map");
+expor.sessionArray = new Map();
 expor.curOpenSession = "none";
-expor.sessionOnline = require("collections/sorted-map");
-expor.sockets = require("collections/sorted-map");
-expor.sessionLog = require("collections/sorted-map");
+expor.sessionOnline = new Map();
+expor.sockets = new Map();
+expor.sessionLog = new Map();
 
 expor.getSessionNameFromID = function(id) {
-    expor.sessionArray.SortedMap(function (element) {
+    expor.sessionArray.forEach(function (element) {
         if(element.socketid == id){
             return element.name;
         }
@@ -28,7 +29,7 @@ expor.startSocket = function (socketOb) {
     });
     socket.on('authed', function() {
         console.log("Connected!");
-        util.sessionOnline.SortedMap().set(socketOb.name, true);
+        util.sessionOnline.set(socketOb.name, true);
         socket.emit('curlogs');
     });
     socket.on('error', function (data){
@@ -38,21 +39,21 @@ expor.startSocket = function (socketOb) {
         console.log("[Error Connect] " + data + " " + socketOb.name);
     });
     socket.on('curlogs', function (data){
-        util.sessionLog.SortedMap().set(socketOb.name, data);
+        util.sessionLog.set(socketOb.name, data);
     });
     socket.on('log', function (data) {
         console.log("log: " + data);
-        util.sessionLog.SortedMap().set(socketOb.name, util.sessionLog.SortedMap().get(socketOb.name) + data);
+        util.sessionLog.set(socketOb.name, util.sessionLog.get(socketOb.name) + data);
     });
     socket.on('disconnect', function () {
-        util.sessionOnline.SortedMap().set(socketOb.name, false);
+        util.sessionOnline.set(socketOb.name, false);
     });
-    util.sockets.SortedMap().set(socketOb.name, socket);
-    util.sessionOnline.SortedMap().set(socketOb.name, false);
-    util.sessionLog.SortedMap().set(socketOb.name, "");
-    util.sessionArray.SortedMap().set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
+    util.sockets.set(socketOb.name, socket);
+    util.sessionOnline.set(socketOb.name, false);
+    util.sessionLog.set(socketOb.name, "");
+    util.sessionArray.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
 
-    console.log("Finish method " + socketOb.name + "!");
+    console.log("Finish method " + socketOb.name + "! " + util.sockets.keys());
     console.log(util.sessionArray);
     const stor = require('./storage.js');
     stor.fileScanN++;
