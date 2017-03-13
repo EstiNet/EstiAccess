@@ -24,18 +24,12 @@ expor.startSocket = function (socketOb) {
     socket.on('connect', function () {
         console.log("Found connection with " + socketOb.name + "!");
         util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;
-        socket.emit('hello', socketOb.password, function (data) {
-            if (data.equals("authed")) {
-                console.log("Connected!");
-                util.sessionOnline.SortedMap().set(socketOb.name, true);
-                socket.emit('curlogs', function (data) {
-                    util.sessionLog.SortedMap().set(socketOb.name, data);
-                });
-            }
-            else {
-                console.log("Failed to connect! " + data);
-            }
-        });
+        socket.emit('hello', socketOb.password);
+    });
+    socket.on('authed', function() {
+        console.log("Connected!");
+        util.sessionOnline.SortedMap().set(socketOb.name, true);
+        socket.emit('curlogs');
     });
     socket.on('error', function (data){
         console.log("[Error] " + data + " " + socketOb.name);

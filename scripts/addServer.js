@@ -1,6 +1,6 @@
 function loadAddServer(){
     const util = require("./vars.js");
-    util.curOpenSession = -1;
+    util.curOpenSession = "none";
     $( "#container-f" ).fadeOut(300, function(){
         $( "#container-f" ).load( "./html/addServer.html", function() {
             $( "#container-f" ).fadeIn(300);

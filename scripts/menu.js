@@ -13,7 +13,7 @@ function getMenuHTML(filename){
 function sessionClick(element){
     var remote = require('electron').remote;
     const util = remote.getGlobal('vars');
-    util.curOpenSession = element.name;
+    util.curOpenSession = element.id;
     configureServer();
 }
 function close(){
