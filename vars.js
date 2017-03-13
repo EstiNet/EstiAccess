@@ -20,7 +20,7 @@ expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
     console.log("Starting connection with " + socketOb.name + " " + socketOb.ip + " " + socketOb.port + "...");
 
-    //var socket = require('socket.io-client')('http://' + socketOb.ip + ':' + socketOb.port, {transports: ['websocket']});
+    /*var socket = require('socket.io-client')('http://' + socketOb.ip + ':' + socketOb.port, {transports: ['websocket']});
     socket.on('connect', function () {
         console.log("Found connection with " + socketOb.name + "!");
         util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;
@@ -57,7 +57,7 @@ expor.startSocket = function (socketOb) {
     util.sessionOnline.SortedMap().set(socketOb.name, false);
     util.sessionLog.SortedMap().set(socketOb.name, "");
     util.sessionArray.SortedMap().set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
-    //socket.connect();
+    socket.connect();*/
 
     console.log("Finish method " + socketOb.name + "!");
     console.log(util.sessionArray);
