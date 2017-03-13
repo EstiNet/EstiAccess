@@ -12,11 +12,9 @@ function configureServer() {
                                 if (!e) e = window.event;
                                 var keyCode = e.keyCode || e.which;
                                 if (keyCode == '13'){
-                                    console.log('yay');
                                     submitText();
                                     return false;
                                 }
-                                console.log('nay');
                             };
                             $("#serverSettings").hide(function () {
                                 $("#container-f").fadeIn(300);
@@ -30,9 +28,11 @@ function configureServer() {
 }
 function updateLog() {
     var remote = require('electron').remote;
-    const util = remote.getGlobal('vars');
-    document.getElementById('commandwindow').innerHTML = util.sessionLog.get(util.curOpenSession);
-    document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
+    let util = remote.getGlobal('vars');
+    let str = util.sessionLog.get(util.curOpenSession);
+    str = str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    str = str.replacestring = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+    document.getElementById('commandwindow').innerHTML = str;
 }
 function openConsoleLog() {
     $("#" + serverMenuOpen + "A").removeClass("active");

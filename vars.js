@@ -42,14 +42,15 @@ expor.startSocket = function (socketOb) {
     });
     socket.on('curlogs', function (data){
         var string = data;
-        string = string.replace(/(?:\r\n|\r|\n)/g, '<br />');
+        //string = string.replace(/(?:\r\n|\r|\n)/g, '<br />');
+        string = string.replace(/(?:\r\n|\r|\n)/g, '\r');
         util.sessionLog.set(socketOb.name, string);
     });
     socket.on('log', function (data) {
         console.log("log: " + data);
         data = data + "";
         data = data.substring(data.indexOf(" ") + 1);
-        util.sessionLog.set(socketOb.name, util.sessionLog.get(socketOb.name) + "<br/>" + data);
+        util.sessionLog.set(socketOb.name, util.sessionLog.get(socketOb.name) + "\r" + data);
         const main = require('./main.js');
         if(util.curOpenSession == socketOb.name){
             main.mainWindow.webContents.send("updateConsole");
