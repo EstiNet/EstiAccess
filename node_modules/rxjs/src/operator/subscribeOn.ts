@@ -1,6 +1,9 @@
-import {Scheduler} from '../Scheduler';
-import {Observable} from '../Observable';
-import {SubscribeOnObservable} from '../observable/SubscribeOnObservable';
+import { Operator } from '../Operator';
+import { Scheduler } from '../Scheduler';
+import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable';
+import { TeardownLogic } from '../Subscription';
+import { SubscribeOnObservable } from '../observable/SubscribeOnObservable';
 
 /**
  * Asynchronously subscribes Observers to this Observable on the specified Scheduler.
@@ -13,10 +16,17 @@ import {SubscribeOnObservable} from '../observable/SubscribeOnObservable';
  * @method subscribeOn
  * @owner Observable
  */
-export function subscribeOn<T>(scheduler: Scheduler, delay: number = 0): Observable<T> {
-  return new SubscribeOnObservable<T>(this, delay, scheduler);
+export function subscribeOn<T>(this: Observable<T>, scheduler: Scheduler, delay: number = 0): Observable<T> {
+  return this.lift(new SubscribeOnOperator<T>(scheduler, delay));
 }
 
-export interface SubscribeOnSignature<T> {
-  (scheduler: Scheduler, delay?: number): Observable<T>;
+class SubscribeOnOperator<T> implements Operator<T, T> {
+  constructor(private scheduler: Scheduler,
+              private delay: number) {
+  }
+  call(subscriber: Subscriber<T>, source: any): TeardownLogic {
+    return new SubscribeOnObservable(
+      source, this.delay, this.scheduler
+    ).subscribe(subscriber);
+  }
 }

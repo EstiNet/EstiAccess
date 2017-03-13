@@ -51,10 +51,11 @@ var MapOperator = (function () {
         this.thisArg = thisArg;
     }
     MapOperator.prototype.call = function (subscriber, source) {
-        return source._subscribe(new MapSubscriber(subscriber, this.project, this.thisArg));
+        return source.subscribe(new MapSubscriber(subscriber, this.project, this.thisArg));
     };
     return MapOperator;
 }());
+exports.MapOperator = MapOperator;
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore

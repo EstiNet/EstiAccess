@@ -1,9 +1,10 @@
-import {Observable} from '../Observable';
-import {Scheduler} from '../Scheduler';
-import {Operator} from '../Operator';
-import {PartialObserver} from '../Observer';
-import {Subscriber} from '../Subscriber';
-import {Notification} from '../Notification';
+import { Observable } from '../Observable';
+import { Scheduler } from '../Scheduler';
+import { Operator } from '../Operator';
+import { PartialObserver } from '../Observer';
+import { Subscriber } from '../Subscriber';
+import { Notification } from '../Notification';
+import { TeardownLogic } from '../Subscription';
 
 /**
  * @see {@link Notification}
@@ -14,20 +15,16 @@ import {Notification} from '../Notification';
  * @method observeOn
  * @owner Observable
  */
-export function observeOn<T>(scheduler: Scheduler, delay: number = 0): Observable<T> {
+export function observeOn<T>(this: Observable<T>, scheduler: Scheduler, delay: number = 0): Observable<T> {
   return this.lift(new ObserveOnOperator(scheduler, delay));
-}
-
-export interface ObserveOnSignature<T> {
-  (scheduler: Scheduler, delay?: number): Observable<T>;
 }
 
 export class ObserveOnOperator<T> implements Operator<T, T> {
   constructor(private scheduler: Scheduler, private delay: number = 0) {
   }
 
-  call(subscriber: Subscriber<T>, source: any): any {
-    return source._subscribe(new ObserveOnSubscriber(subscriber, this.scheduler, this.delay));
+  call(subscriber: Subscriber<T>, source: any): TeardownLogic {
+    return source.subscribe(new ObserveOnSubscriber(subscriber, this.scheduler, this.delay));
   }
 }
 

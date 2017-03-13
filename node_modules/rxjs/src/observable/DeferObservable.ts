@@ -1,9 +1,9 @@
-import {Observable, SubscribableOrPromise} from '../Observable';
-import {Subscriber} from '../Subscriber';
-import {Subscription} from '../Subscription';
+import { Observable, SubscribableOrPromise } from '../Observable';
+import { Subscriber } from '../Subscriber';
+import { Subscription } from '../Subscription';
 
-import {subscribeToResult} from '../util/subscribeToResult';
-import {OuterSubscriber} from '../OuterSubscriber';
+import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber';
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -38,6 +38,12 @@ export class DeferObservable<T> extends Observable<T> {
    *   }
    * });
    * clicksOrInterval.subscribe(x => console.log(x));
+   * 
+   * // Results in the following behavior:
+   * // If the result of Math.random() is greater than 0.5 it will listen
+   * // for clicks anywhere on the "document"; when document is clicked it
+   * // will log a MouseEvent object to the console. If the result is less
+   * // than 0.5 it will emit ascending numbers, one every second(1000ms).
    *
    * @see {@link create}
    *

@@ -1,6 +1,6 @@
 const expor = module.exports = {};
 
-expor.configureArray = [{'name': 'test', 'ip': 'localhost', 'port': '1', 'password': 'help'}];
+expor.configureArray = [];
 expor.sessionArray = require("collections/sorted-map");
 expor.curOpenSession = "none";
 expor.sessionOnline = require("collections/sorted-map");
@@ -20,7 +20,7 @@ expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
     console.log("Starting connection with " + socketOb.name + " " + socketOb.ip + " " + socketOb.port + "...");
 
-    var io = require('socket.io-client'), socket = io.connect('http://' + socketOb.ip, {port: socketOb.port});
+    var socket = require('socket.io-client')('http://' + socketOb.ip + ':' + socketOb.port, {transports: ['websocket']});
     socket.on('connection', function () {
         console.log("Found connection with " + socketOb.name + "!");
         util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;

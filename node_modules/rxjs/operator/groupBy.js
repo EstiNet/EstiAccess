@@ -10,6 +10,7 @@ var Observable_1 = require('../Observable');
 var Subject_1 = require('../Subject');
 var Map_1 = require('../util/Map');
 var FastMap_1 = require('../util/FastMap');
+/* tslint:disable:max-line-length */
 /**
  * Groups the items emitted by an Observable according to a specified criterion,
  * and emits these grouped items as `GroupedObservables`, one
@@ -31,19 +32,19 @@ var FastMap_1 = require('../util/FastMap');
  * @method groupBy
  * @owner Observable
  */
-function groupBy(keySelector, elementSelector, durationSelector) {
-    return this.lift(new GroupByOperator(this, keySelector, elementSelector, durationSelector));
+function groupBy(keySelector, elementSelector, durationSelector, subjectSelector) {
+    return this.lift(new GroupByOperator(keySelector, elementSelector, durationSelector, subjectSelector));
 }
 exports.groupBy = groupBy;
 var GroupByOperator = (function () {
-    function GroupByOperator(source, keySelector, elementSelector, durationSelector) {
-        this.source = source;
+    function GroupByOperator(keySelector, elementSelector, durationSelector, subjectSelector) {
         this.keySelector = keySelector;
         this.elementSelector = elementSelector;
         this.durationSelector = durationSelector;
+        this.subjectSelector = subjectSelector;
     }
     GroupByOperator.prototype.call = function (subscriber, source) {
-        return source._subscribe(new GroupBySubscriber(subscriber, this.keySelector, this.elementSelector, this.durationSelector));
+        return source.subscribe(new GroupBySubscriber(subscriber, this.keySelector, this.elementSelector, this.durationSelector, this.subjectSelector));
     };
     return GroupByOperator;
 }());
@@ -54,16 +55,15 @@ var GroupByOperator = (function () {
  */
 var GroupBySubscriber = (function (_super) {
     __extends(GroupBySubscriber, _super);
-    function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector) {
-        _super.call(this);
+    function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
+        _super.call(this, destination);
         this.keySelector = keySelector;
         this.elementSelector = elementSelector;
         this.durationSelector = durationSelector;
+        this.subjectSelector = subjectSelector;
         this.groups = null;
         this.attemptedToUnsubscribe = false;
         this.count = 0;
-        this.destination = destination;
-        this.add(destination);
     }
     GroupBySubscriber.prototype._next = function (value) {
         var key;
@@ -82,46 +82,37 @@ var GroupBySubscriber = (function (_super) {
             groups = this.groups = typeof key === 'string' ? new FastMap_1.FastMap() : new Map_1.Map();
         }
         var group = groups.get(key);
-        if (!group) {
-            groups.set(key, group = new Subject_1.Subject());
-            var groupedObservable = new GroupedObservable(key, group, this);
-            if (this.durationSelector) {
-                this._selectDuration(key, group);
-            }
-            this.destination.next(groupedObservable);
-        }
+        var element;
         if (this.elementSelector) {
-            this._selectElement(value, group);
+            try {
+                element = this.elementSelector(value);
+            }
+            catch (err) {
+                this.error(err);
+            }
         }
         else {
-            this.tryGroupNext(value, group);
+            element = value;
         }
-    };
-    GroupBySubscriber.prototype._selectElement = function (value, group) {
-        var result;
-        try {
-            result = this.elementSelector(value);
+        if (!group) {
+            group = this.subjectSelector ? this.subjectSelector() : new Subject_1.Subject();
+            groups.set(key, group);
+            var groupedObservable = new GroupedObservable(key, group, this);
+            this.destination.next(groupedObservable);
+            if (this.durationSelector) {
+                var duration = void 0;
+                try {
+                    duration = this.durationSelector(new GroupedObservable(key, group));
+                }
+                catch (err) {
+                    this.error(err);
+                    return;
+                }
+                this.add(duration.subscribe(new GroupDurationSubscriber(key, group, this)));
+            }
         }
-        catch (err) {
-            this.error(err);
-            return;
-        }
-        this.tryGroupNext(result, group);
-    };
-    GroupBySubscriber.prototype._selectDuration = function (key, group) {
-        var duration;
-        try {
-            duration = this.durationSelector(new GroupedObservable(key, group));
-        }
-        catch (err) {
-            this.error(err);
-            return;
-        }
-        this.add(duration.subscribe(new GroupDurationSubscriber(key, group, this)));
-    };
-    GroupBySubscriber.prototype.tryGroupNext = function (value, group) {
-        if (!group.isUnsubscribed) {
-            group.next(value);
+        if (!group.closed) {
+            group.next(element);
         }
     };
     GroupBySubscriber.prototype._error = function (err) {
@@ -148,7 +139,7 @@ var GroupBySubscriber = (function (_super) {
         this.groups.delete(key);
     };
     GroupBySubscriber.prototype.unsubscribe = function () {
-        if (!this.isUnsubscribed && !this.attemptedToUnsubscribe) {
+        if (!this.closed && !this.attemptedToUnsubscribe) {
             this.attemptedToUnsubscribe = true;
             if (this.count === 0) {
                 _super.prototype.unsubscribe.call(this);
@@ -171,24 +162,18 @@ var GroupDurationSubscriber = (function (_super) {
         this.parent = parent;
     }
     GroupDurationSubscriber.prototype._next = function (value) {
-        this.tryComplete();
+        this._complete();
     };
     GroupDurationSubscriber.prototype._error = function (err) {
-        this.tryError(err);
-    };
-    GroupDurationSubscriber.prototype._complete = function () {
-        this.tryComplete();
-    };
-    GroupDurationSubscriber.prototype.tryError = function (err) {
         var group = this.group;
-        if (!group.isUnsubscribed) {
+        if (!group.closed) {
             group.error(err);
         }
         this.parent.removeGroup(this.key);
     };
-    GroupDurationSubscriber.prototype.tryComplete = function () {
+    GroupDurationSubscriber.prototype._complete = function () {
         var group = this.group;
-        if (!group.isUnsubscribed) {
+        if (!group.closed) {
             group.complete();
         }
         this.parent.removeGroup(this.key);
@@ -214,7 +199,7 @@ var GroupedObservable = (function (_super) {
     GroupedObservable.prototype._subscribe = function (subscriber) {
         var subscription = new Subscription_1.Subscription();
         var _a = this, refCountSubscription = _a.refCountSubscription, groupSubject = _a.groupSubject;
-        if (refCountSubscription && !refCountSubscription.isUnsubscribed) {
+        if (refCountSubscription && !refCountSubscription.closed) {
             subscription.add(new InnerRefCountSubscription(refCountSubscription));
         }
         subscription.add(groupSubject.subscribe(subscriber));
@@ -237,7 +222,7 @@ var InnerRefCountSubscription = (function (_super) {
     }
     InnerRefCountSubscription.prototype.unsubscribe = function () {
         var parent = this.parent;
-        if (!parent.isUnsubscribed && !this.isUnsubscribed) {
+        if (!parent.closed && !this.closed) {
             _super.prototype.unsubscribe.call(this);
             parent.count -= 1;
             if (parent.count === 0 && parent.attemptedToUnsubscribe) {

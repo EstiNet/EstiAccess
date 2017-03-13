@@ -14,8 +14,7 @@ var Subscriber_1 = require('../Subscriber');
  * @owner Observable
  */
 function every(predicate, thisArg) {
-    var source = this;
-    return source.lift(new EveryOperator(predicate, thisArg, source));
+    return this.lift(new EveryOperator(predicate, thisArg, this));
 }
 exports.every = every;
 var EveryOperator = (function () {
@@ -25,7 +24,7 @@ var EveryOperator = (function () {
         this.source = source;
     }
     EveryOperator.prototype.call = function (observer, source) {
-        return source._subscribe(new EverySubscriber(observer, this.predicate, this.thisArg, this.source));
+        return source.subscribe(new EverySubscriber(observer, this.predicate, this.thisArg, this.source));
     };
     return EveryOperator;
 }());

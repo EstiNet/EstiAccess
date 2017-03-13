@@ -1,6 +1,7 @@
-import {Observable} from '../Observable';
-import {Operator} from '../Operator';
-import {Subscriber} from '../Subscriber';
+import { Observable } from '../Observable';
+import { Operator } from '../Operator';
+import { Subscriber } from '../Subscriber';
+import { TeardownLogic } from '../Subscription';
 
 /**
  * Returns an Observable that skips all items emitted by the source Observable as long as a specified condition holds
@@ -14,20 +15,16 @@ import {Subscriber} from '../Subscriber';
  * @method skipWhile
  * @owner Observable
  */
-export function skipWhile<T>(predicate: (value: T, index: number) => boolean): Observable<T> {
+export function skipWhile<T>(this: Observable<T>, predicate: (value: T, index: number) => boolean): Observable<T> {
   return this.lift(new SkipWhileOperator(predicate));
-}
-
-export interface SkipWhileSignature<T> {
-  (predicate: (value: T, index: number) => boolean): Observable<T>;
 }
 
 class SkipWhileOperator<T> implements Operator<T, T> {
   constructor(private predicate: (value: T, index: number) => boolean) {
   }
 
-  call(subscriber: Subscriber<T>, source: any): any {
-    return source._subscribe(new SkipWhileSubscriber(subscriber, this.predicate));
+  call(subscriber: Subscriber<T>, source: any): TeardownLogic {
+    return source.subscribe(new SkipWhileSubscriber(subscriber, this.predicate));
   }
 }
 

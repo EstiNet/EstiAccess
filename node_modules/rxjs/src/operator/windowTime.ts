@@ -1,11 +1,11 @@
-import {Operator} from '../Operator';
-import {Subscriber} from '../Subscriber';
-import {Observable} from '../Observable';
-import {Subject} from '../Subject';
-import {Subscription} from '../Subscription';
-import {Scheduler} from '../Scheduler';
-import {Action} from '../scheduler/Action';
-import {async} from '../scheduler/async';
+import { Scheduler } from '../Scheduler';
+import { Action } from '../scheduler/Action';
+import { Subject } from '../Subject';
+import { Operator } from '../Operator';
+import { async } from '../scheduler/async';
+import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable';
+import { Subscription } from '../Subscription';
 
 /**
  * Branch out the source Observable values as a nested Observable periodically
@@ -56,14 +56,10 @@ import {async} from '../scheduler/async';
  * @method windowTime
  * @owner Observable
  */
-export function windowTime<T>(windowTimeSpan: number,
+export function windowTime<T>(this: Observable<T>, windowTimeSpan: number,
                               windowCreationInterval: number = null,
                               scheduler: Scheduler = async): Observable<Observable<T>> {
   return this.lift(new WindowTimeOperator<T>(windowTimeSpan, windowCreationInterval, scheduler));
-}
-
-export interface WindowTimeSignature<T> {
-  (windowTimeSpan: number, windowCreationInterval?: number, scheduler?: Scheduler): Observable<Observable<T>>;
 }
 
 class WindowTimeOperator<T> implements Operator<T, Observable<T>> {
@@ -74,7 +70,7 @@ class WindowTimeOperator<T> implements Operator<T, Observable<T>> {
   }
 
   call(subscriber: Subscriber<Observable<T>>, source: any): any {
-    return source._subscribe(new WindowTimeSubscriber(
+    return source.subscribe(new WindowTimeSubscriber(
       subscriber, this.windowTimeSpan, this.windowCreationInterval, this.scheduler
     ));
   }
@@ -118,7 +114,7 @@ class WindowTimeSubscriber<T> extends Subscriber<T> {
     const len = windows.length;
     for (let i = 0; i < len; i++) {
       const window = windows[i];
-      if (!window.isUnsubscribed) {
+      if (!window.closed) {
         window.next(value);
       }
     }
@@ -136,7 +132,7 @@ class WindowTimeSubscriber<T> extends Subscriber<T> {
     const windows = this.windows;
     while (windows.length > 0) {
       const window = windows.shift();
-      if (!window.isUnsubscribed) {
+      if (!window.closed) {
         window.complete();
       }
     }
@@ -147,7 +143,6 @@ class WindowTimeSubscriber<T> extends Subscriber<T> {
     const window = new Subject<T>();
     this.windows.push(window);
     const destination = this.destination;
-    destination.add(window);
     destination.next(window);
     return window;
   }
@@ -165,13 +160,13 @@ interface TimeSpanOnlyState<T> {
   subscriber: WindowTimeSubscriber<T>;
 }
 
-function dispatchWindowTimeSpanOnly<T>(state: TimeSpanOnlyState<T>) {
+function dispatchWindowTimeSpanOnly<T>(this: Action<TimeSpanOnlyState<T>>, state: TimeSpanOnlyState<T>) {
   const { subscriber, windowTimeSpan, window } = state;
   if (window) {
     window.complete();
   }
   state.window = subscriber.openWindow();
-  (<any>this).schedule(state, windowTimeSpan);
+  this.schedule(state, windowTimeSpan);
 }
 
 interface Context<T> {
@@ -185,10 +180,10 @@ interface DispatchArg<T> {
   context: Context<T>;
 }
 
-function dispatchWindowCreation<T>(state: CreationState<T>) {
+function dispatchWindowCreation<T>(this: Action<CreationState<T>>, state: CreationState<T>) {
   let { windowTimeSpan, subscriber, scheduler, windowCreationInterval } = state;
   let window = subscriber.openWindow();
-  let action = <Action<CreationState<T>>>this;
+  let action = this;
   let context: Context<T> = { action, subscription: <any>null };
   const timeSpanState: DispatchArg<T> = { subscriber, window, context };
   context.subscription = scheduler.schedule(dispatchWindowClose, windowTimeSpan, timeSpanState);

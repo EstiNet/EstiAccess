@@ -1,11 +1,11 @@
 [![Build Status](https://travis-ci.org/ReactiveX/rxjs.svg?branch=master)](https://travis-ci.org/ReactiveX/rxjs)
-[![Coverage Status](https://coveralls.io/repos/ReactiveX/RxJS/badge.svg?branch=master&service=github)](https://coveralls.io/github/ReactiveX/RxJS?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ReactiveX/rxjs/badge.svg?branch=master)](https://coveralls.io/github/ReactiveX/rxjs?branch=master)
 [![npm version](https://badge.fury.io/js/%40reactivex%2Frxjs.svg)](http://badge.fury.io/js/%40reactivex%2Frxjs)
 [![Join the chat at https://gitter.im/Reactive-Extensions/RxJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Reactive-Extensions/RxJS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/rxjs5.svg)](https://saucelabs.com/u/rxjs5)
 
-# RxJS 5 (beta)
+# RxJS 5 (release candidate)
 
 Reactive Extensions Library for JavaScript. This is a rewrite of [Reactive-Extensions/RxJS](https://github.com/Reactive-Extensions/RxJS) and is intended to supersede it once this is ready. This rewrite is meant to have better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface.
 
@@ -27,7 +27,7 @@ By contributing or commenting on issues in this repository, whether you've read 
 ### ES6 via npm
 
 ```sh
-npm install rxjs-es
+npm install rxjs
 ```
 
 To import the entire core set of functionality:
@@ -41,19 +41,23 @@ Rx.Observable.of(1,2,3)
 To import only what you need by patching (this is useful for size-sensitive bundling):
 
 ```js
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 
 Observable.of(1,2,3).map(x => x + '!!!'); // etc
 ```
 
-To import what you need and use it with ES next function bind (best overall method, if possible):
+To import what you need and use it with proposed [bind operator](https://github.com/tc39/proposal-bind-operator):
+
+> Note: This additional syntax requires [transpiler support](http://babeljs.io/docs/plugins/transform-function-bind/) and this syntax may be completely withdrawn from TC39 without notice! Use at your own risk.
 
 ```js
-import {Observable} from 'rxjs/Observable';
-import {map} from 'rxjs/operator/map';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { map } from 'rxjs/operator/map';
 
-Observable.of(1,2,3)::map(x => x + '!!!'); // etc
+Observable::of(1,2,3)::map(x => x + '!!!'); // etc
 ```
 
 ### CommonJS via npm
@@ -75,6 +79,7 @@ Import only what you need and patch Observable (this is useful in size-sensitive
 ```js
 var Observable = require('rxjs/Observable').Observable;
 // patch Observable with appropriate methods
+require('rxjs/add/observable/of');
 require('rxjs/add/operator/map');
 
 Observable.of(1,2,3).map(function (x) { return x + '!!!'; }); // etc
@@ -83,10 +88,10 @@ Observable.of(1,2,3).map(function (x) { return x + '!!!'; }); // etc
 Import operators and use them _manually_ you can do the following (this is also useful for bundling):
 
 ```js
-var Observable = require('rxjs/Observable').Observable;
+var of = require('rxjs/observable/of').of;
 var map = require('rxjs/operator/map').map;
 
-map.call(Observable.of(1,2,3), function (x) { return x + '!!!'; });
+map.call(of(1,2,3), function (x) { return x + '!!!'; });
 ```
 
 You can also use the above method to build your own Observable and export it from your own module.
@@ -103,15 +108,21 @@ npm install @reactivex/rxjs
 If you are using npm **version 2** before this library has achieved a stable version, you need to specify the library version explicitly:
 
 ```sh
-npm install @reactivex/rxjs@5.0.0-beta.1
+npm install @reactivex/rxjs@5.0.0-rc.1
 ```
 
 ### CDN
 
-For CDN, you can use [npmcdn](https://npmcdn.com). Just replace `version` with the current
-version on the link below:
+For CDN, you can use [unpkg](https://unpkg.com/):
 
-https://npmcdn.com/@reactivex/rxjs@version/dist/global/Rx.umd.js
+5.0.0-beta.1 - 5.0.0-beta.11:
+
+https://unpkg.com/@reactivex/rxjs/dist/global/Rx.umd.js
+
+
+5.0.0-beta.12 or higher:
+
+https://unpkg.com/@reactivex/rxjs/dist/global/Rx.js
 
 #### Node.js Usage:
 
@@ -171,6 +182,9 @@ For Mac OS X with [Homebrew](http://brew.sh/):
 - `brew install imagemagick`
 - `brew install graphicsmagick`
 - `brew install ghostscript`
+- You may need to install the Ghostscript fonts manually:
+  - Download the tarball from the [gs-fonts project](https://sourceforge.net/projects/gs-fonts)
+  - `mkdir -p /usr/local/share/ghostscript && tar zxvf /path/to/ghostscript-fonts.tar.gz -C /usr/local/share/ghostscript`
 
 For Debian Linux:
 

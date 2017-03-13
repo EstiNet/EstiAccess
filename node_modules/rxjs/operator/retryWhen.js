@@ -35,7 +35,7 @@ var RetryWhenOperator = (function () {
         this.source = source;
     }
     RetryWhenOperator.prototype.call = function (subscriber, source) {
-        return source._subscribe(new RetryWhenSubscriber(subscriber, this.notifier, this.source));
+        return source.subscribe(new RetryWhenSubscriber(subscriber, this.notifier, this.source));
     };
     return RetryWhenOperator;
 }());
@@ -69,7 +69,7 @@ var RetryWhenSubscriber = (function (_super) {
                 this.retriesSubscription = null;
             }
             this.unsubscribe();
-            this.isUnsubscribed = false;
+            this.closed = false;
             this.errors = errors;
             this.retries = retries;
             this.retriesSubscription = retriesSubscription;
@@ -95,7 +95,7 @@ var RetryWhenSubscriber = (function (_super) {
         this.retriesSubscription = null;
         this.unsubscribe();
         this.isStopped = false;
-        this.isUnsubscribed = false;
+        this.closed = false;
         this.errors = errors;
         this.retries = retries;
         this.retriesSubscription = retriesSubscription;

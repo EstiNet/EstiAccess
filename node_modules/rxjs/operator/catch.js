@@ -4,7 +4,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = require('../Subscriber');
+var OuterSubscriber_1 = require('../OuterSubscriber');
+var subscribeToResult_1 = require('../util/subscribeToResult');
 /**
  * Catches errors on the observable to be handled by returning a new observable or throwing an error.
  * @param {function} selector a function that takes as arguments `err`, which is the error, and `caught`, which
@@ -13,6 +14,7 @@ var Subscriber_1 = require('../Subscriber');
  * @return {Observable} an observable that originates from either the source or the observable returned by the
  *  catch `selector` function.
  * @method catch
+ * @name catch
  * @owner Observable
  */
 function _catch(selector) {
@@ -26,7 +28,7 @@ var CatchOperator = (function () {
         this.selector = selector;
     }
     CatchOperator.prototype.call = function (subscriber, source) {
-        return source._subscribe(new CatchSubscriber(subscriber, this.selector, this.caught));
+        return source.subscribe(new CatchSubscriber(subscriber, this.selector, this.caught));
     };
     return CatchOperator;
 }());
@@ -54,14 +56,11 @@ var CatchSubscriber = (function (_super) {
                 this.destination.error(err);
                 return;
             }
-            this._innerSub(result);
+            this.unsubscribe();
+            this.destination.remove(this);
+            subscribeToResult_1.subscribeToResult(this, result);
         }
     };
-    CatchSubscriber.prototype._innerSub = function (result) {
-        this.unsubscribe();
-        this.destination.remove(this);
-        result.subscribe(this.destination);
-    };
     return CatchSubscriber;
-}(Subscriber_1.Subscriber));
+}(OuterSubscriber_1.OuterSubscriber));
 //# sourceMappingURL=catch.js.map
