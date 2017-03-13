@@ -52,9 +52,10 @@ function createWindow() {
     var socket = require('socket.io-client')('http://localhost:6921', {transports: ['websocket']});
     socket.on('connect', function(){console.log("connect");});
     socket.on('event', function(data){console.log("data");});
+    socket.on('poo', function(data){console.log(data)});
     socket.on('disconnect', function(){console.log("disconnect")});
     socket.on('connect_error', function(data){console.log(data)});
-    //socket.connect();
+    socket.connect();
 }
 
 // This method will be called when Electron has finished

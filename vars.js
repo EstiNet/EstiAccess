@@ -20,8 +20,8 @@ expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
     console.log("Starting connection with " + socketOb.name + " " + socketOb.ip + " " + socketOb.port + "...");
 
-    var socket = require('socket.io-client')('http://' + socketOb.ip + ':' + socketOb.port, {transports: ['websocket']});
-    socket.on('connection', function () {
+    //var socket = require('socket.io-client')('http://' + socketOb.ip + ':' + socketOb.port, {transports: ['websocket']});
+    socket.on('connect', function () {
         console.log("Found connection with " + socketOb.name + "!");
         util.sessionOnline[expor.getSessionNameFromID(socket.id)] = true;
         socket.emit('hello', socketOb.password, function (data) {
@@ -33,7 +33,7 @@ expor.startSocket = function (socketOb) {
                 });
             }
             else {
-                console.log("Failed to connect!");
+                console.log("Failed to connect! " + data);
             }
         });
     });
@@ -47,6 +47,7 @@ expor.startSocket = function (socketOb) {
         util.sessionLog.SortedMap().set(socketOb.name, data);
     });
     socket.on('log', function (data) {
+        console.log("log: " + data);
         util.sessionLog.SortedMap().set(socketOb.name, util.sessionLog.SortedMap().get(socketOb.name) + data);
     });
     socket.on('disconnect', function () {
@@ -56,7 +57,7 @@ expor.startSocket = function (socketOb) {
     util.sessionOnline.SortedMap().set(socketOb.name, false);
     util.sessionLog.SortedMap().set(socketOb.name, "");
     util.sessionArray.SortedMap().set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
-    socket.open();
+    //socket.connect();
 
     console.log("Finish method " + socketOb.name + "!");
     console.log(util.sessionArray);
