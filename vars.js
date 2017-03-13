@@ -47,9 +47,13 @@ expor.startSocket = function (socketOb) {
     });
     socket.on('log', function (data) {
         console.log("log: " + data);
-        var string = data + "";
-        string = string.replace(/(?:\r\n|\r|\n)/g, '<br />');
-        util.sessionLog.set(socketOb.name, util.sessionLog.get(socketOb.name) + string);
+        data = data + "";
+        data = data.substring(data.indexOf(" ") + 1);
+        util.sessionLog.set(socketOb.name, util.sessionLog.get(socketOb.name) + "<br/>" + data);
+        const main = require('./main.js');
+        if(util.curOpenSession == socketOb.name){
+            main.mainWindow.webContents.send("updateConsole");
+        }
     });
     socket.on('disconnect', function () {
         util.sessionOnline.set(socketOb.name, false);
