@@ -58,4 +58,6 @@ expor.startSocket = function (socketOb) {
     socket.connect();
     console.log("Finish method " + socketOb.name + "!");
     console.log(util.sessionArray);
+    const stor = require('./storage.js');
+    stor.fileScanN++;
 };

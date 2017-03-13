@@ -1,5 +1,6 @@
 var jsonfile = require("jsonfile");
 const expor = module.exports = {};
+expor.fileScanN = 0;
 expor.indexStorage = function () {
     const util = require('./vars.js');
     console.log("Indexing storage...");
@@ -25,11 +26,30 @@ expor.indexStorage = function () {
                 util.startSocket(obj);
             });
         }
-        mutil.mainWindow.loadURL(url.format({
-            pathname: path.join(__dirname, 'index.html'),
-            protocol: 'file:',
-            slashes: true
-        }));
+        console.log("Started all json searches.");
+        function recursive(){
+            console.log("recursive");
+            if(expor.fileScanN < files.length && mutil.mainWindow != null){
+                console.log("recursive1 " + expor.fileScanN);
+                setTimeout(recursive, 1000);
+            }
+            else{
+                console.log("recursive2 " + expor.fileScanN);
+                console.log(util.configureArray);
+                console.log(Math.floor(Date.now() / 1000));
+                setTimeout(load, 1000);
+            }
+        }
+        function load(){
+            const url = require('url');
+            const path = require('path');
+            mutil.mainWindow.loadURL(url.format({
+                pathname: path.join(__dirname, 'index.html'),
+                protocol: 'file:',
+                slashes: true
+            }));
+        }
+        recursive();
     });
 };
 

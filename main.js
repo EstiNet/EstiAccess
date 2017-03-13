@@ -30,8 +30,7 @@ function createWindow() {
     });
     console.log("Creating window...");
 
-    // Create the browser window.
-    expor.mainWindow = new BrowserWindow({width: 800, height: 600});
+    expor.mainWindow = new BrowserWindow({width: 800, height: 600})
 
     // and load the index.html of the app.
     expor.mainWindow.loadURL(url.format({

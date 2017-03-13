@@ -3,6 +3,7 @@ function getMenuHTML(filename){
     filenam = filename;
     const util = require(filename);
     var retur = "";
+    console.log(Math.floor(Date.now() / 1000));
     util.configureArray.forEach(function(elements){ //oh shoot
         console.log(elements);
         retur += '<li><a href="#session" onclick=sessionClick(this) id=' + elements.name + '>' + elements.name + '</a></li>'
