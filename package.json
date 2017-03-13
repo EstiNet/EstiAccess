@@ -4,11 +4,7 @@
   "description": "A cool console management program to manage EstiConsole servers.",
   "main": "main.js",
   "scripts": {
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"electron .",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings",
-    "postinstall": "typings install"
+    "start": "electron ."
   },
   "author": "EspiDev",
   "license": "CC0-1.0",

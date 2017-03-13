@@ -19,16 +19,15 @@ const storage = require("./storage.js");
 const expor = module.exports = {};
 expor.mainWindow = null;
 
-storage.indexStorage();
-console.log("Indexed storage.");
-
-console.log(util.configureArray);
-
-util.configureArray.forEach(function(element){
-    util.startSocket(element);
-});
-
 function createWindow() {
+    storage.indexStorage();
+    console.log("Indexed storage.");
+
+    console.log(util.configureArray);
+
+    util.configureArray.forEach(function(element){
+        util.startSocket(element);
+    });
     console.log("Creating window...");
 
     // Create the browser window.
@@ -36,7 +35,7 @@ function createWindow() {
 
     // and load the index.html of the app.
     expor.mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'landing.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -51,7 +50,6 @@ function createWindow() {
         // when you should delete the corresponding element.
         expor.mainWindow = null;
     });
-    expor.mainWindow.webContents.send('refreshMenu');
 }
 
 // This method will be called when Electron has finished

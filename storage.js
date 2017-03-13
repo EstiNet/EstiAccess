@@ -9,7 +9,9 @@ expor.indexStorage = function () {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
     }
+    const mutil = require('./main.js');
     fs.readdir(dir, (err, files) => {
+        console.log("Indexing " + fs);
         for(var i = 0; i <files.length; i++){
             var file = files[i];
             console.log(file);
@@ -23,8 +25,11 @@ expor.indexStorage = function () {
                 util.startSocket(obj);
             });
         }
-        var main = require("./main.js");
-        //main.mainWindow.webContents.send('refreshMenu');
+        mutil.mainWindow.loadURL(url.format({
+            pathname: path.join(__dirname, 'index.html'),
+            protocol: 'file:',
+            slashes: true
+        }));
     });
 };
 

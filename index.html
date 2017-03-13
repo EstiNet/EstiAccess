@@ -50,6 +50,7 @@
 
     var {ipcRenderer, remote} = require('electron');
     ipcRenderer.on('refreshMenu', (event, arg) => {
+        console.log("recieved refreshMenu");
         document.getElementById('list').innerHTML = getMenuHTML("./vars.js");
     });
 </script>
