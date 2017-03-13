@@ -18,7 +18,8 @@ expor.getSessionNameFromID = function(id) {
 
 expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
-    console.log("Starting connection with " + socketOb.name + "...");
+    console.log("Starting connection with " + socketOb.name + " " + socketOb.ip + " " + socketOb.port + "...");
+
     var io = require('socket.io-client'), socket = io.connect('http://' + socketOb.ip, {port: socketOb.port});
     socket.on('connection', function () {
         console.log("Found connection with " + socketOb.name + "!");
@@ -36,11 +37,11 @@ expor.startSocket = function (socketOb) {
             }
         });
     });
-    socket.on('connect_error', function (data){
-       console.log("[Error Connect] " + data + " " + socketOb.name);
-    });
     socket.on('error', function (data){
         console.log("[Error] " + data + " " + socketOb.name);
+    });
+    socket.on('connect_error', function (data){
+        console.log("[Error Connect] " + data + " " + socketOb.name);
     });
     socket.on('curlogs', function (data){
         util.sessionLog.SortedMap().set(socketOb.name, data);
@@ -55,9 +56,12 @@ expor.startSocket = function (socketOb) {
     util.sessionOnline.SortedMap().set(socketOb.name, false);
     util.sessionLog.SortedMap().set(socketOb.name, "");
     util.sessionArray.SortedMap().set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
-    socket.connect();
+    socket.open();
+
     console.log("Finish method " + socketOb.name + "!");
     console.log(util.sessionArray);
     const stor = require('./storage.js');
     stor.fileScanN++;
 };
+
+global.vars = expor;

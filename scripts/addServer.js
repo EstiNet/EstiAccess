@@ -12,9 +12,11 @@ function verify(){
     var ip = document.getElementById("uIP").value;
     var port = document.getElementById("uPort").value;
     var pass = document.getElementById("uPass").value;
-    const util = require("./vars.js");
+    //const util = require("./vars.js");
+    var remote = require('electron').remote;
+    const util = remote.getGlobal('vars');
     if (name == "") {
-        document.getElementById("alert").innerHTML = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" onclick=close() aria-label="Close"><span onclick=close() aria-hidden="true">&times;</span></button>Name must be filled out.</div>';
+        document.getElementById("alert").innerHTML = '<div class="alert alert-danger alert-dismissible" onclick="close()" role="alert"><button type="button" class="close" data-dismiss="alert" onclick=close() aria-label="Close"><span onclick=close() aria-hidden="true">&times;</span></button>Name must be filled out.</div>';
         return false;
     }
     else if (util.getSessionNameFromID(name) != "idunoman") {
@@ -34,7 +36,7 @@ function verify(){
         return false;
     }
     else{
-        var storage = require('./storage.js');
+        var storage = remote.getGlobal('store');
         storage.createSession(name, ip, port, pass);
         document.getElementById("alert").innerHTML = '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" onclick="close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>Created a new server listing!</div>';
         document.getElementById('list').innerHTML = getMenuHTML("./vars.js");

@@ -1,9 +1,9 @@
 var filenam = "";
 function getMenuHTML(filename){
     filenam = filename;
-    const util = require(filename);
+    var remote = require('electron').remote;
+    const util = remote.getGlobal('vars');
     var retur = "";
-    console.log(Math.floor(Date.now() / 1000));
     util.configureArray.forEach(function(elements){ //oh shoot
         console.log(elements);
         retur += '<li><a href="#session" onclick=sessionClick(this) id=' + elements.name + '>' + elements.name + '</a></li>'
@@ -11,7 +11,8 @@ function getMenuHTML(filename){
     return retur;
 }
 function sessionClick(element){
-    const util = require(filenam);
+    var remote = require('electron').remote;
+    const util = remote.getGlobal('vars');
     util.curOpenSession = element.name;
     configureServer();
 }

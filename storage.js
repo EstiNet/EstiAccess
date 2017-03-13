@@ -28,15 +28,10 @@ expor.indexStorage = function () {
         }
         console.log("Started all json searches.");
         function recursive(){
-            console.log("recursive");
             if(expor.fileScanN < files.length && mutil.mainWindow != null){
-                console.log("recursive1 " + expor.fileScanN);
                 setTimeout(recursive, 1000);
             }
             else{
-                console.log("recursive2 " + expor.fileScanN);
-                console.log(util.configureArray);
-                console.log(Math.floor(Date.now() / 1000));
                 setTimeout(load, 1000);
             }
         }
@@ -70,3 +65,5 @@ expor.createSession = function (name, ip, port, password) {
     util.configureArray.push(json);
     util.startSocket(json);
 };
+
+global.store = expor;

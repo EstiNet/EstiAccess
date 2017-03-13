@@ -49,6 +49,12 @@ function createWindow() {
         // when you should delete the corresponding element.
         expor.mainWindow = null;
     });
+    var socket = require('socket.io-client')('http://192.168.2.254:6921');
+    socket.on('connect', function(){console.log("connect");});
+    socket.on('event', function(data){console.log("data");});
+    socket.on('disconnect', function(){console.log("disconnect")});
+    socket.on('connect_error', function(data){console.log(data)});
+    socket.open();
 }
 
 // This method will be called when Electron has finished
