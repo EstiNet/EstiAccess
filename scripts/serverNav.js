@@ -8,7 +8,6 @@ function configureServer() {
                     $("#serverSettings").load("./html/serverSettings.html", function () {
                         $("#serverFiles").hide(function () {
                             updateLog();
-                            document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
                             document.getElementById('command').onkeypress = function(e){
                                 if (!e) e = window.event;
                                 var keyCode = e.keyCode || e.which;
@@ -18,6 +17,7 @@ function configureServer() {
                                 }
                             };
                             $("#serverSettings").hide(function () {
+                                document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
                                 $("#container-f").fadeIn(300);
                             });
                         });

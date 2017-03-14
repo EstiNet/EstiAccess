@@ -6,7 +6,7 @@ function getMenuHTML(filename){
     var retur = "";
     util.configureArray.forEach(function(elements){ //oh shoot
         //console.log(elements);
-        retur += '<li><a href="#session" onclick=sessionClick(this) id=' + elements.name + '>' + elements.name + '</a></li>'
+        retur += '<li><a href="#session" style="font-family:Raleway;" onclick=sessionClick(this) id=' + elements.name + '>' + elements.name + '</a></li>'
     });
     return retur;
 }
