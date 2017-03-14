@@ -34,10 +34,15 @@ function updateLog() {
     let b = false;
     console.log(document.getElementById('commandwindow').scrollTop + 5 + " " + document.getElementById('commandwindow').scrollHeight);
     if(document.getElementById('commandwindow').scrollTop+5 == document.getElementById('commandwindow').scrollHeight) b = true;
-    str = str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    str = str.replacestring = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
-    document.getElementById('commandwindow').innerHTML = str;
-    if(b) document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
+    if(str != undefined){
+        str = str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        str = str.replacestring = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+        document.getElementById('commandwindow').innerHTML = str;
+        if(b) document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
+    }
+    else{
+        document.getElementById(".-.");
+    }
 }
 function openConsoleLog() {
     $("#" + serverMenuOpen + "A").removeClass("active");

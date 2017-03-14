@@ -32,7 +32,7 @@ expor.indexStorage = function () {
                 setTimeout(recursive, 1000);
             }
             else{
-                load();
+                setTimeout(load, 3000);
             }
         }
         function load(){

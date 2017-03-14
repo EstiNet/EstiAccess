@@ -8,6 +8,8 @@ expor.sessionOnline = new Map();
 expor.sockets = new Map();
 expor.sessionLog = new Map();
 
+expor.chCache = {name: 'default', ip: 'default', port: 'default', pass: 'default'};
+
 expor.version = "v1.0.0";
 
 expor.getSessionNameFromID = function(id) {
@@ -20,8 +22,7 @@ expor.getSessionNameFromID = function(id) {
 };
 
 expor.deleteCurServer = function(func){
-    const storage = require('./storage.js');
-    storage.deleteSession(expor.curOpenSession, function(){
+    require('./storage.js').deleteSession(expor.curOpenSession, function(){
         for(var i = 0; i < expor.configureArray.length; i++){
             if(expor.configureArray[i].name == expor.curOpenSession){
                 expor.configureArray.splice(i, 1);
@@ -36,10 +37,11 @@ expor.deleteCurServer = function(func){
     });
 };
 
-expor.changeCurServer = function(socketOb, func) {
-    const storage = require('./storage.js');
+expor.changeCurServer = function (func) {
+    console.log('f')
     expor.deleteCurServer(function(){
-        storage.createSession(socketOb.name, socketOb.ip, socketOb.port, socketOb.pass, function(){
+        console.log(expor.chCache.name + " <_________");
+        require('./storage.js').createSession(expor.chCache.name, expor.chCache.ip, expor.chCache.port, expor.chCache.pass, function(){
             func();
         });
     });

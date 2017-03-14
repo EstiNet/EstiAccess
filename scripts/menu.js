@@ -5,7 +5,7 @@ function getMenuHTML(filename){
     const util = remote.getGlobal('vars');
     var retur = "";
     util.configureArray.forEach(function(elements){ //oh shoot
-        console.log(elements);
+        //console.log(elements);
         retur += '<li><a href="#session" onclick=sessionClick(this) id=' + elements.name + '>' + elements.name + '</a></li>'
     });
     return retur;
