@@ -58,7 +58,12 @@ function openServerFiles() {
     });
 }
 function openServerSettings() {
-
+    var remote = require('electron').remote;
+    let util = remote.getGlobal('vars');
+    document.getElementById('seName').value = util.sessionArray.get(util.curOpenSession).name;
+    document.getElementById('seIP').value = util.sessionArray.get(util.curOpenSession).ip;
+    document.getElementById('sePort').value = util.sessionArray.get(util.curOpenSession).port;
+    document.getElementById('sePass').value = util.sessionArray.get(util.curOpenSession).password;
     $("#" + serverMenuOpen + "A").removeClass("active");
     $("#serverSettingsA").addClass("active");
     $("#" + serverMenuOpen).fadeOut(300, function () {

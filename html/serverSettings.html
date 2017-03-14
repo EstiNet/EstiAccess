@@ -1,28 +1,38 @@
 <br/>
-<h2>Change Server Info</h2>
-<div class="input-group">
-    <span class="input-group-addon" id="seName">Name</span>
-    <input type="text" id="uName" class="form-control" aria-describedby="basic-addon1">
+<div class="panel panel-warning">
+    <div class="panel-heading">Change Server Info</div>
+    <div class="panel-body">
+        <div class="input-group">
+            <span class="input-group-addon" id="eName">Name</span>
+            <input type="text" id="seName" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon" id="eIP">IP</span>
+            <input type="text" id="seIP" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon" id="ePort">Port</span>
+            <input type="text" id="sePort" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon" id="ePass">Password</span>
+            <input type="text" id="sePass" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <button type="button" onclick="changeInfo()" class="btn btn-default">Save</button>
+    </div>
 </div>
 <br>
-<div class="input-group">
-    <span class="input-group-addon" id="seIP">IP</span>
-    <input type="text" id="uIP" class="form-control" aria-describedby="basic-addon1">
+<hr>
+<div class="panel panel-danger">
+    <div class="panel-heading">Danger Zone</div>
+    <div class="panel-body">
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delServer">Delete Server</button>
+    </div>
 </div>
-<br>
-<div class="input-group">
-    <span class="input-group-addon" id="sePort">Port</span>
-    <input type="text" id="uPort" class="form-control" aria-describedby="basic-addon1">
-</div>
-<br>
-<div class="input-group">
-    <span class="input-group-addon" id="sePass">Password</span>
-    <input type="text" id="uPass" class="form-control" aria-describedby="basic-addon1">
-</div>
-<br>
-<button type="button" onclick="changeInfo()" class="btn btn-default">Save</button>
-<br/>
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delServer">Delete Server</button>
 
 <!-- Modal -->
 <div class="modal fade" id="delServer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

@@ -48,7 +48,7 @@ expor.indexStorage = function () {
     });
 };
 
-expor.createSession = function (name, ip, port, password) {
+expor.createSession = function (name, ip, port, password, func) {
     const jsonFile = require('jsonfile');
     const util = require('./vars.js');
     var fs = require('fs');
@@ -64,6 +64,7 @@ expor.createSession = function (name, ip, port, password) {
     });
     util.configureArray.push(json);
     util.startSocket(json);
+    if(func != undefined) func();
 };
 
 expor.deleteSession = function(name, func){

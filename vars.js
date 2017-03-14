@@ -36,6 +36,15 @@ expor.deleteCurServer = function(func){
     });
 };
 
+expor.changeCurServer = function(socketOb, func) {
+    const storage = require('./storage.js');
+    expor.deleteCurServer(function(){
+        storage.createSession(socketOb.name, socketOb.ip, socketOb.port, socketOb.pass, function(){
+            func();
+        });
+    });
+};
+
 expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
     console.log("Starting connection with " + socketOb.name + " " + socketOb.ip + " " + socketOb.port + "...");
@@ -79,7 +88,7 @@ expor.startSocket = function (socketOb) {
         util.sessionOnline.set(socketOb.name, false);
     });
     util.sockets.set(socketOb.name, socket);
-    util.sessionArray.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
+    util.sessionArray.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'password': socketOb.password, 'socketid': socket.id});
     console.log("Finish method " + socketOb.name + "! " + util.sockets.keys());
     console.log(util.sessionArray);
     const stor = require('./storage.js');
