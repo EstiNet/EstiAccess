@@ -8,6 +8,8 @@ expor.sessionOnline = new Map();
 expor.sockets = new Map();
 expor.sessionLog = new Map();
 
+expor.version = "v1.0.0";
+
 expor.getSessionNameFromID = function(id) {
     expor.sessionArray.forEach(function (element) {
         if(element.socketid == id){
@@ -15,6 +17,10 @@ expor.getSessionNameFromID = function(id) {
         }
     });
     return "idunoman";
+};
+
+expor.deleteCurServer = function(){
+
 };
 
 expor.startSocket = function (socketOb) {

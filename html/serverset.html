@@ -1,12 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-heading">Console Output</div>
-    <div class="panel-body" id="commandwindow" style="overflow: scroll; height: 500px;">
-        Panel content
+    <div class="panel-body" id="commandwindow" style="overflow: scroll; height: 400px;">
+        Loading...
     </div>
 </div>
 <div class="input-group">
     <input type="text" id="command" class="form-control" placeholder="Type command here...">
     <span class="input-group-btn">
         <button class="btn btn-default" onclick="submitText()" id="commandButton" type="button">Send!</button>
+        <button class="btn btn-default" onclick="document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;" type="button"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></button>
     </span>
 </div>
