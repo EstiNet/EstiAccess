@@ -1,7 +1,7 @@
 serverMenuOpen = "none";
 function configureServer() {
     serverMenuOpen = "consoleLog";
-    $("#container-f").fadeOut(200, function () {
+    $("#container-f").fadeOut(120, function () {
         $("#container-f").load("./html/mainNav.html", function () {
             $("#consoleLog").load("./html/serverset.html", function () {
                 $("#serverFiles").load("./html/serverFiles.html", function () {
@@ -58,6 +58,7 @@ function openServerFiles() {
     });
 }
 function openServerSettings() {
+
     $("#" + serverMenuOpen + "A").removeClass("active");
     $("#serverSettingsA").addClass("active");
     $("#" + serverMenuOpen).fadeOut(300, function () {

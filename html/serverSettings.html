@@ -1,3 +1,27 @@
+<br/>
+<h2>Change Server Info</h2>
+<div class="input-group">
+    <span class="input-group-addon" id="seName">Name</span>
+    <input type="text" id="uName" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="seIP">IP</span>
+    <input type="text" id="uIP" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="sePort">Port</span>
+    <input type="text" id="uPort" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="sePass">Password</span>
+    <input type="text" id="uPass" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<button type="button" onclick="changeInfo()" class="btn btn-default">Save</button>
+<br/>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delServer">Delete Server</button>
 
 <!-- Modal -->
@@ -9,7 +33,9 @@
                 <h4 class="modal-title" id="myModalLabel">Are you sure you want to delete this server?</h4>
             </div>
             <div class="modal-body">
-                ...
+                <img src="resources/sad.jpg" style="width: 100%">
+                <hr/>
+                <center>You cannot undo this action.</center>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

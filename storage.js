@@ -66,4 +66,11 @@ expor.createSession = function (name, ip, port, password) {
     util.startSocket(json);
 };
 
+expor.deleteSession = function(name, func){
+    var fs = require('fs');
+    fs.unlink('sessions/' + name + ".json", function() {
+        func();
+    });
+};
+
 global.store = expor;

@@ -19,8 +19,21 @@ expor.getSessionNameFromID = function(id) {
     return "idunoman";
 };
 
-expor.deleteCurServer = function(){
-
+expor.deleteCurServer = function(func){
+    const storage = require('./storage.js');
+    storage.deleteSession(expor.curOpenSession, function(){
+        for(var i = 0; i < expor.configureArray.length; i++){
+            if(expor.configureArray[i].name == expor.curOpenSession){
+                expor.configureArray.splice(i, 1);
+            }
+        }
+        expor.sessionArray.delete(expor.curOpenSession);
+        expor.sessionOnline.delete(expor.curOpenSession);
+        expor.sockets.get(expor.curOpenSession).disconnect();
+        expor.sockets.delete(expor.curOpenSession);
+        expor.sessionLog.delete(expor.curOpenSession);
+        func();
+    });
 };
 
 expor.startSocket = function (socketOb) {
@@ -67,7 +80,6 @@ expor.startSocket = function (socketOb) {
     });
     util.sockets.set(socketOb.name, socket);
     util.sessionArray.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'socketid': socket.id});
-
     console.log("Finish method " + socketOb.name + "! " + util.sockets.keys());
     console.log(util.sessionArray);
     const stor = require('./storage.js');
