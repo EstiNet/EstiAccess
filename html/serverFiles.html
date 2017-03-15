@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+    <div class="panel-heading" id="curDirectory"></div>
+    <div class="panel-body" id="fileSys">
+        Panel content
+    </div>
+</div>
+<script>
+    refreshFiles();
+    function refreshFiles(){
+        var remote = require('electron').remote;
+        const util = remote.getGlobal('vars');
+        var cur = util.sessionArray.get(util.curOpenSession).curDirectory;
+        document.getElementById('curDirectory').innerHTML = cur + '<button class="btn btn-default" onclick="submitText()" id="commandButton" type="button"><span class="glyphicon glyphicon-refresh" style="right: 0px" aria-hidden="true"></span></button>'
+        if(cur != "./") {
+            document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"> <li class="list-group-item">../</li> </ul>';
+        }
+        else{
+            document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"></ul>';
+        }
+        console.log('requesting');
+        util.requestCurServerFiles(cur, function(data){
+            console.log('fuc');
+            var filear = [];
+            for(ob in data){
+                if(ob.isDir){
+                    document.getElementById('fileSysL').innerHTML += '<li class="list-group-item"><span class="badge">' + ob.size + 'mb</span> <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>' + ob.name + '</li>';
+                }
+                else{
+                    filear.push(ob);
+                }
+            }
+            for(ob in filear){
+                document.getElementById('fileSysL').innerHTML += '<li class="list-group-item"><span class="badge">' + ob.size + 'mb</span> <span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span>' + ob.name + '</li>'
+            }
+        });
+    }
+</script>

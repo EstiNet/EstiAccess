@@ -40,7 +40,7 @@ function createWindow() {
     }));
 
     // Open the DevTools.
-    //expor.mainWindow.webContents.openDevTools();
+    expor.mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     expor.mainWindow.on('closed', function () {

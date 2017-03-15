@@ -8,6 +8,8 @@ expor.sessionOnline = new Map();
 expor.sockets = new Map();
 expor.sessionLog = new Map();
 
+expor.curOpenSessionFiles = "";
+
 expor.chCache = {name: 'default', ip: 'default', port: 'default', pass: 'default'};
 
 expor.version = "v1.0.0";
@@ -38,12 +40,25 @@ expor.deleteCurServer = function(func){
 };
 
 expor.changeCurServer = function (func) {
-    console.log('f')
     expor.deleteCurServer(function(){
-        console.log(expor.chCache.name + " <_________");
         require('./storage.js').createSession(expor.chCache.name, expor.chCache.ip, expor.chCache.port, expor.chCache.pass, function(){
             func();
         });
+    });
+};
+
+expor.requestCurServerFiles = function (directory, func) {
+    console.log('infunc ' + expor.curOpenSession);
+    expor.sockets.get(expor.curOpenSession).emit('curdir', directory, function(data){
+        console.log('recieve callback ' + data);
+        var array = data.split(" ");
+        array.splice(0, 1);
+        var retur = [];
+        for(var str in array){
+            var ar = str.split(":");
+            retur.push({name: ar[0], size: ar[1], isDir: ar[2]});
+        }
+        func(retur);
     });
 };
 
@@ -66,6 +81,9 @@ expor.startSocket = function (socketOb) {
     });
     socket.on('error', function (data){
         console.log("[Error] " + data + " " + socketOb.name);
+    });
+    socket.on('ecerror', function (data){
+       console.log("[ECError] " + data)
     });
     socket.on('connect_error', function (data){
         console.log("[Error Connect] " + data + " " + socketOb.name);
@@ -90,7 +108,7 @@ expor.startSocket = function (socketOb) {
         util.sessionOnline.set(socketOb.name, false);
     });
     util.sockets.set(socketOb.name, socket);
-    util.sessionArray.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'password': socketOb.password, 'socketid': socket.id});
+    util.sessionArray.set(socketOb.name,{'name': socketOb.name, 'ip': socketOb.ip, 'port': socketOb.port, 'password': socketOb.password, 'socketid': socket.id, 'curDirectory': './'});
     console.log("Finish method " + socketOb.name + "! " + util.sockets.keys());
     console.log(util.sessionArray);
     const stor = require('./storage.js');
