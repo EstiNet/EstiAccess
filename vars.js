@@ -61,6 +61,23 @@ expor.requestCurServerFiles = function (directory, func) {
     });
 };
 
+expor.uploadFile = function(element, func){
+    element.files.forEach(function(data){
+        var directory = expor.sessionArray.get(expor.curOpenSession).curDirectory;
+
+        var reader = new FileReader();
+
+        reader.readAsArrayBuffer(data)
+
+        if(directory.charAt(directory.length-1) == '/'){
+            expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name, reader.result);
+        }
+        else{
+            expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name, reader.result);
+        }
+    });
+};
+
 expor.startSocket = function (socketOb) {
     const util = require('./vars.js');
     console.log("Starting connection with " + socketOb.name + " " + socketOb.ip + " " + socketOb.port + "...");
@@ -82,7 +99,7 @@ expor.startSocket = function (socketOb) {
         console.log("[Error] " + data + " " + socketOb.name);
     });
     socket.on('ecerror', function (data){
-       console.log("[ECError] " + data)
+        console.log("[ECError] " + data)
     });
     socket.on('connect_error', function (data){
         console.log("[Error Connect] " + data + " " + socketOb.name);
