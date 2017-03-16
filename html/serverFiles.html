@@ -1,3 +1,9 @@
+<style scoped>
+    .list-group panel.active {
+        background-color: #030;;
+        border-color: #aed248;
+    }
+</style>
 <div class="panel panel-default">
     <div class="panel-heading" id="curDirectory"></div>
     <div class="panel-body" id="fileSys">
@@ -6,32 +12,50 @@
 </div>
 <script>
     refreshFiles();
-    function refreshFiles(){
+    function refreshFiles(func){
         var remote = require('electron').remote;
         const util = remote.getGlobal('vars');
         var cur = util.sessionArray.get(util.curOpenSession).curDirectory;
-        document.getElementById('curDirectory').innerHTML = cur + '<button class="btn btn-default" onclick="submitText()" id="commandButton" type="button"><span class="glyphicon glyphicon-refresh" style="right: 0px" aria-hidden="true"></span></button>'
+        document.getElementById('curDirectory').innerHTML = cur + '<button class="btn btn-default" onclick="submitText()" id="commandButton" type="button"><span class="glyphicon glyphicon-refresh" onclick="refreshFiles()" style="right: 0;" aria-hidden="true"></span></button>';
         if(cur != "./") {
-            document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"> <li class="list-group-item">../</li> </ul>';
+            document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"> <li class="list-group-item ftplist" poo="../" ondblclick="chDir(this)" onmouseleave="mouseOut(this)" onmouseover="mouseOver(this)"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> ../</li> </ul>';
         }
         else{
             document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"></ul>';
         }
-        console.log('requesting');
         util.requestCurServerFiles(cur, function(data){
-            console.log('fuc');
-            var filear = [];
-            for(ob in data){
-                if(ob.isDir){
-                    document.getElementById('fileSysL').innerHTML += '<li class="list-group-item"><span class="badge">' + ob.size + 'mb</span> <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>' + ob.name + '</li>';
+            let filear = [];
+            for(var ob in data){
+                if(data[ob].isDir == "true"){
+                    document.getElementById('fileSysL').innerHTML += '<li class="list-group-item ftplist" poo="' + data[ob].name + '" ondblclick="chDir(this)" onmouseleave="mouseOut(this)" onmouseover="mouseOver(this)"><span class="badge">' + data[ob].size + 'kb</span> <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> ' + data[ob].name + '</li>';
                 }
                 else{
-                    filear.push(ob);
+                    filear.push(data[ob]);
                 }
             }
             for(ob in filear){
-                document.getElementById('fileSysL').innerHTML += '<li class="list-group-item"><span class="badge">' + ob.size + 'mb</span> <span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span>' + ob.name + '</li>'
+                document.getElementById('fileSysL').innerHTML += '<li class="list-group-item ftplist" onmouseleave="mouseOut(this)" onmouseover="mouseOver(this)"><span class="badge">' + filear[ob].size + 'kb</span> <span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span> ' + filear[ob].name + '</li>'
             }
+            $('.list-group-item').css({'background-color': 'white', "transition":"background-color 0.3s ease"});
+        });
+        if(func != undefined) func();
+    }
+    function mouseOver(element){
+        element.style.backgroundColor = '#1dc8e2';
+    }
+    function mouseOut(element){
+        element.style.backgroundColor = 'white';
+    }
+    function chDir(element){
+        var remote = require('electron').remote;
+        const util = remote.getGlobal('vars');
+        util.sessionArray.get(util.curOpenSession).curDirectory = util.sessionArray.get(util.curOpenSession).curDirectory + "/" + element.getAttribute('poo');
+        $('#container-f').fadeOut(100, function(){
+            $('#loader').show();
+            refreshFiles(function(){
+                $('#loader').hide();
+                $('#container-f').fadeIn(200);
+            });
         });
     }
 </script>

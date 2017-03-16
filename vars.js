@@ -52,10 +52,9 @@ expor.requestCurServerFiles = function (directory, func) {
     expor.sockets.get(expor.curOpenSession).emit('curdir', directory, function(data){
         console.log('recieve callback ' + data);
         var array = data.split(" ");
-        array.splice(0, 1);
         var retur = [];
         for(var str in array){
-            var ar = str.split(":");
+            var ar = array[str].split(":");
             retur.push({name: ar[0], size: ar[1], isDir: ar[2]});
         }
         func(retur);

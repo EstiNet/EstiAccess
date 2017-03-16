@@ -1,5 +1,6 @@
 serverMenuOpen = "none";
 function configureServer() {
+    $('#loader').show();
     serverMenuOpen = "consoleLog";
     $("#container-f").fadeOut(120, function () {
         $("#container-f").load("./html/mainNav.html", function () {
@@ -18,6 +19,7 @@ function configureServer() {
                             };
                             $("#serverSettings").hide(function () {
                                 document.getElementById('commandwindow').scrollTop = document.getElementById('commandwindow').scrollHeight;
+                                $('#loader').fadeOut(100);
                                 $("#container-f").fadeIn(300);
                             });
                         });
