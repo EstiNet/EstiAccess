@@ -10,6 +10,38 @@
         Panel content
     </div>
 </div>
+<div class="modal fade" id="uProgress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Uploading file...</h4>
+            </div>
+            <div class="modal-body">
+                <div class="main">
+                    <div class="s1">
+                        <div class="s b sb1"></div>
+                        <div class="s b sb2"></div>
+                        <div class="s b sb3"></div>
+                        <div class="s b sb4"></div>
+                    </div>
+                    <div class="s2">
+                        <div class="s b sb5"></div>
+                        <div class="s b sb6"></div>
+                        <div class="s b sb7"></div>
+                        <div class="s b sb8"></div>
+                    </div>
+                    <div class="bigcon">
+                        <div class="big b"></div>
+                    </div>
+                </div>
+                <div id="uploadProgress"></div>
+            </div>
+            <div class="modal-footer">
+                this may or may not be a good idea.
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     refreshFiles();
     function refreshFiles(func){
@@ -53,12 +85,13 @@
         $('#uploadinput').change(function(){
             var remote = require('electron').remote;
             const util = remote.getGlobal('vars');
-            console.log(document.getElementById('uploadinput'));
-            util.uploadFile(document.getElementById("uploadinput").files, function() {
-                betterRefresh();
+            document.getElementById('uProgress').setAttribute('class', 'modal fade in');
+            document.getElementById('uProgress').setAttribute('style', 'display: block;');
+            document.getElementsByTagName("BODY")[0].setAttribute('class', 'modal-open');
+            util.uploadFile(document.getElementById("uploadinput").files, function() {betterRefresh()}, function(index, top){
+                document.getElementById('#uploadProgress').innerHTML = index + "/" + top;
             });
         });
-        //setTimeout(async, 0 );
     }
     function mouseOver(element){
         element.style.backgroundColor = '#1dc8e2';
@@ -114,6 +147,9 @@
     function betterRefresh(){
         $('#container-f').fadeOut(100, function(){
             $('#loader').show(function(){
+                document.getElementById('uProgress').setAttribute('class', 'modal fade');
+                document.getElementById('uProgress').setAttribute('style', 'display: none;');
+                document.getElementsByTagName("BODY")[0].removeAttribute('class');
                 refreshFiles(function(){
                     $('#loader').hide();
                     $('#container-f').fadeIn(200);

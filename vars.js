@@ -71,21 +71,24 @@ expor.uploadFile = function(element, func, everfunc){
         reader.addEventListener('load', function (ev) {
             "`"
             var strarray = [];
-            if(ev.target.result > 60000){
+            if(ev.target.result.length > 2000){
                 var enroute = 0;
                 strarray.push("");
-                for(var i = 0; i < ev.target.result; i++){
-                    if(i%60000 == 0){
+                for(var i = 0; i < ev.target.result.length; i++){
+                    if(i%2000 == 0){
                         strarray.push("");
+                        console.log('a ' + ev.target.result.toString().charAt(i));
                         enroute++;
                     }
-                    strarray[enroute] += ev.target.result[i];
+                    strarray[enroute] += ev.target.result.toString().charAt(i);
                 }
             }
+            console.log(ev.target.result + " ohyeah " + ev.target.result.length);
+            console.log(ev.target.result.constructor.name);
             if (directory.charAt(directory.length - 1) == '/') {
-                if(ev.target.result <= 60000){
+                if(ev.target.result.length <= 2000){
                     expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + ev.target.result, function (data) {
-                        console.log(data);
+                        //console.log(data);
                         //DETECT IF DATA IS BAD (ecerror)
                         if(data == "uploadcontinue"){
                             expor.sockets.get(expor.curOpenSession).emit('uploadgood')
@@ -94,29 +97,62 @@ expor.uploadFile = function(element, func, everfunc){
                     });
                 }
                 else{
+                    var index = 0;
                     function check(data){
-                        console.log(data);
+                        //console.log(data);
                         //DETECT IF DATA IS BAD (ecerror)
                         if(data == "uploadcontinue"){
                             if(index+1 == strarray.length){
                                 expor.sockets.get(expor.curOpenSession).emit('uploadgood')
+                                func();
                             }
                             else{
-                                expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + ev.target.result, check(data));
+                                index++;
                                 everfunc(index, strarray.length);
+                                expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + strarray[index], check(data));
                             }
                         }
-                        func();
+                        else{
+                            func();
+                        }
                     }
-                    var index = 0;
                     expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + ev.target.result, check(data));
                 }
             }
             else {
-                expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name + " " + ev.target.result, function (data) {
-                    console.log(data);
-                    func();
-                });
+                if(ev.target.result.length <= 2000) {
+                    expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name + " " + ev.target.result, function (data) {
+                        //console.log(data);
+                        //DETECT IF DATA IS BAD (ecerror)
+                        if(data == "uploadcontinue"){
+                            expor.sockets.get(expor.curOpenSession).emit('uploadgood')
+                        }
+                        func();
+                    });
+                }
+                else{
+                    var index = 0;
+                    function check(data){
+                        //console.log(data);
+                        //DETECT IF DATA IS BAD (ecerror)
+                        if(data == "uploadcontinue"){
+                            if(index+1 == strarray.length){
+                                expor.sockets.get(expor.curOpenSession).emit('uploadgood');
+                                func();
+                            }
+                            else{
+                                console.log('t4 upload', directory + "/" + data.name + " " + strarray[index]);
+                                index++;
+                                everfunc(index, strarray.length);
+                                expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name + " " + strarray[index], check(data));
+                            }
+                        }
+                        else{
+                            func();
+                        }
+                    }
+                    expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name + " " + strarray[index], check(data));
+                }
             }
         });
     }
