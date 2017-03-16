@@ -18,9 +18,11 @@
         var runAsync = require('run-async');
         var async = function () {
             var cur = util.sessionArray.get(util.curOpenSession).curDirectory;
-            document.getElementById('curDirectory').innerHTML = cur + '<button class="btn btn-default" onclick="submitText()" id="commandButton" style="right: 0px;" type="button"><span class="glyphicon glyphicon-refresh" onclick="refreshFiles()" aria-hidden="true"></span></button>';
+            document.getElementById('curDirectory').innerHTML = cur + '<button class="btn btn-default" onclick="betterRefresh()" style="float: right; down=300px;" type="button" data-toggle="tooltip" data-placement="right" title="Refresh file list"><span class="glyphicon glyphicon-refresh" onclick="betterRefresh()" aria-hidden="true"></span></button>';
+            document.getElementById('curDirectory').innerHTML += '<button class="btn btn-default" onclick="upload()" style="float: right; down=300px;" type="button" data-toggle="tooltip" data-placement="top" title="Upload a file"><span class="glyphicon glyphicon-arrow-up" onclick="upload()" aria-hidden="true"></span></button>';
+            document.getElementById('curDirectory').innerHTML += '<button class="btn btn-default" onclick="refreshFiles()" style="float: right; down=300px;" type="button" data-toggle="tooltip" data-placement="left" title="New folder"><span class="glyphicon glyphicon-plus" onclick="refreshFiles()" aria-hidden="true"></span></button>';
             if(cur != "./") {
-                document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"><div id="dirs"> <li class="list-group-item ftplist" poo="../" ondblclick="chDir(this)" onmouseleave="mouseOut(this)" onmouseover="mouseOver(this)"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> ../</li></div><div id="files"></div> </ul>';
+                document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"><div id="dirs"> <li class="list-group-item ftplist" poo="../" ondblclick="chDir(this)" onmouseleave="mouseOut(this)" onmouseover="mouseOver(this)"><span class="glyphicon glyphicon-level-up" aria-hidden="true"></span> ../</li></div><div id="files"></div> </ul>';
             }
             else{
                 document.getElementById('fileSys').innerHTML = '<ul class="list-group" id="fileSysL"><div id="dirs"></div><div id="files"></div></ul>';
@@ -98,5 +100,18 @@
                 //setTimeout(dos, 0);
             });
         });
+    }
+    function betterRefresh(){
+        $('#container-f').fadeOut(100, function(){
+            $('#loader').show(function(){
+                refreshFiles(function(){
+                    $('#loader').hide();
+                    $('#container-f').fadeIn(200);
+                });
+            });
+        });
+    }
+    function upload(){
+
     }
 </script>
