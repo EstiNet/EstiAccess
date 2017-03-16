@@ -61,21 +61,65 @@ expor.requestCurServerFiles = function (directory, func) {
     });
 };
 
-expor.uploadFile = function(element, func){
-    element.files.forEach(function(data){
+expor.uploadFile = function(element, func, everfunc){
+    for(var i = 0; i < element.length; i++) {
+        var data = element[i];
         var directory = expor.sessionArray.get(expor.curOpenSession).curDirectory;
-
-        var reader = new FileReader();
-
-        reader.readAsArrayBuffer(data)
-
-        if(directory.charAt(directory.length-1) == '/'){
-            expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name, reader.result);
-        }
-        else{
-            expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name, reader.result);
-        }
-    });
+        var FileReader = require('filereader'), reader = new FileReader();
+        reader.setNodeChunkedEncoding(true || false);
+        reader.readAsArrayBuffer(data);
+        reader.addEventListener('load', function (ev) {
+            "`"
+            var strarray = [];
+            if(ev.target.result > 60000){
+                var enroute = 0;
+                strarray.push("");
+                for(var i = 0; i < ev.target.result; i++){
+                    if(i%60000 == 0){
+                        strarray.push("");
+                        enroute++;
+                    }
+                    strarray[enroute] += ev.target.result[i];
+                }
+            }
+            if (directory.charAt(directory.length - 1) == '/') {
+                if(ev.target.result <= 60000){
+                    expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + ev.target.result, function (data) {
+                        console.log(data);
+                        //DETECT IF DATA IS BAD (ecerror)
+                        if(data == "uploadcontinue"){
+                            expor.sockets.get(expor.curOpenSession).emit('uploadgood')
+                        }
+                        func();
+                    });
+                }
+                else{
+                    function check(data){
+                        console.log(data);
+                        //DETECT IF DATA IS BAD (ecerror)
+                        if(data == "uploadcontinue"){
+                            if(index+1 == strarray.length){
+                                expor.sockets.get(expor.curOpenSession).emit('uploadgood')
+                            }
+                            else{
+                                expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + ev.target.result, check(data));
+                                everfunc(index, strarray.length);
+                            }
+                        }
+                        func();
+                    }
+                    var index = 0;
+                    expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + ev.target.result, check(data));
+                }
+            }
+            else {
+                expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name + " " + ev.target.result, function (data) {
+                    console.log(data);
+                    func();
+                });
+            }
+        });
+    }
 };
 
 expor.startSocket = function (socketOb) {
