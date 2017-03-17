@@ -204,6 +204,22 @@ expor.startSocket = function (socketOb) {
     stor.fileScanN++;
 };
 
+expor.createDir = function(str, func){
+    var directory = expor.sessionArray.get(expor.curOpenSession).curDirectory;
+    if(directory.charAt(directory.length-1) == '/'){
+        expor.sockets.get(expor.curOpenSession).emit('mkdir', directory + str, function(data){
+            console.log(data);
+            func();
+        });
+    }
+    else{
+        expor.sockets.get(expor.curOpenSession).emit('mkdir', directory + "/" + str, function(data){
+            console.log(data);
+            func();
+        });
+    }
+};
+
 var Base64 = {
 
 // private property
