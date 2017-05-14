@@ -63,6 +63,18 @@
     </div>
 </div>
 <script>
+    $(function() {
+        $.contextMenu({
+        // define which elements trigger this menu
+        selector: ".ftplist",
+        // define the elements of the menu
+        items: {
+            delete: {name: "delete", icon: "delete", callback: function(key, options){ alert("Foo!"); }},
+            edit: {name: "edit", icon: "edit", callback: function(key, opt){ alert("Bar!") }}
+        }
+        // there's more, have a look at the demos and docs...
+    });
+    });
     refreshFiles();
     function refreshFiles(func){
         var remote = require('electron').remote;
