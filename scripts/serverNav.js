@@ -33,7 +33,7 @@ function updateLog() {
     var remote = require('electron').remote;
     let util = remote.getGlobal('vars');
     let str = util.sessionLog.get(util.curOpenSession);
-    let b = false;
+    let b = true;
     console.log(document.getElementById('commandwindow').scrollTop + 5 + " " + document.getElementById('commandwindow').scrollHeight);
     if(document.getElementById('commandwindow').scrollTop+5 == document.getElementById('commandwindow').scrollHeight) b = true;
     if(str != undefined){
