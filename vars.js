@@ -61,6 +61,10 @@ expor.requestCurServerFiles = function (directory, func) {
     });
 };
 
+expor.downloadFile = function(element, func, everfunc){
+
+};
+
 expor.uploadFile = function(element, func, everfunc){
     for(var i = 0; i < element.length; i++) {
         var data = element[i];
@@ -71,10 +75,10 @@ expor.uploadFile = function(element, func, everfunc){
         reader.addEventListener('load', function (ev) {
             "`"
             var strarray = [], lstr = ev.target.result.toString('base64');
-            if(lstr.length > 2000){
+            if(lstr.length > 10000){
                 var enroute = -1;
                 for(var i = 0; i < lstr.length; i++){
-                    if(i%2000 == 0){
+                    if(i%10000 == 0){
                         strarray.push("");
                         enroute++;
                     }
@@ -82,7 +86,7 @@ expor.uploadFile = function(element, func, everfunc){
                 }
             }
             if (directory.charAt(directory.length - 1) == '/') {
-                if(lstr.length <= 2000){
+                if(lstr.length <= 10000){
                     expor.sockets.get(expor.curOpenSession).emit('upload', directory + data.name + " " + lstr, function (ret) {
                         //DETECT IF DATA IS BAD (ecerror)
                         if(ret == "uploadcontinue"){
@@ -114,7 +118,7 @@ expor.uploadFile = function(element, func, everfunc){
                 }
             }
             else {
-                if(lstr.length <= 2000) {
+                if(lstr.length <= 10000) {
                     expor.sockets.get(expor.curOpenSession).emit('upload', directory + "/" + data.name + " " + lstr, function (ret) {
                         //DETECT IF DATA IS BAD (ecerror)
                         if(ret == "uploadcontinue"){
