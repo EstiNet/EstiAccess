@@ -50,8 +50,8 @@ expor.changeCurServer = function (func) {
 expor.requestCurServerFiles = function (directory, func) {
     //console.log('infunc ' + expor.curOpenSession);
     expor.sockets.get(expor.curOpenSession).emit('curdir', directory, function(data){
-        //console.log('recieve callback ' + data);
-        var array = data.split(" ");
+        console.log('recieve callback ' + data);
+        var array = data.split("`");
         var retur = [];
         for(var str in array){
             var ar = array[str].split(":");
@@ -73,7 +73,6 @@ expor.uploadFile = function(element, func, everfunc){
         reader.setNodeChunkedEncoding(true || false);
         reader.readAsArrayBuffer(data);
         reader.addEventListener('load', function (ev) {
-            "`"
             var strarray = [], lstr = ev.target.result.toString('base64');
             if(lstr.length > 10000){
                 var enroute = -1;

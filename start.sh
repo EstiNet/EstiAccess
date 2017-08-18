@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /home/Flow/EstiAccess
-npm start
+cd ~/Flow/EstiAccess
+npm start --node-flags --max-old-space-size=512
